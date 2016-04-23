@@ -1,0 +1,117 @@
+/**
+ * # 艺龙基础样式重载
+ * # elong style
+ * # 主要内容列表页、详情页
+ */
+@charset "UTF-8";
+
+/* = sprite = */
+.icon_map_w:before, .icon_search_w:before, .bottom_filter .fil_pos:after,
+.bottom_filter .fil_sort:after, .bottom_filter .fil_price:after, .bottom_filter .fil_fil:after,
+.icon_rebate:before, .icon_rebate:after,
+.btnphone i:after, .btn-phone:before {background: url(//pic.c-ctrip.com/h5/tuan/elong_list_icon.png) 0 0 no-repeat; background-size: 181px auto; }
+.comm_qr .comm_fen, .comm_fen_in {background: url(//pic.c-ctrip.com/h5/tuan/elong_comm.png) 0 -14px repeat-x; background-size: 14px auto; }
+.comm_fen_in {background-position: 0 0; }
+.icon_map_w:before {width: 22px; height: 24px; background-position: 0 0; }
+.icon_search_w:before {background-position: -22px 0; }
+.icon_rebate:before, .icon_rebate:after {background-position: -47px 0; background-color: #FFF; }
+.btnphone i:after {width: 16px; height: 16px; background-position: -53px 0; }
+.btn-phone:before {background-position: -70px 0; }
+.bottom_filter .fil_fil:after, .bottom_filter li.fil_fil:active:after {width: 17px; height: 18px; background-position: -86px 0; }
+.bottom_filter .fil_pos:after, .bottom_filter li.fil_pos:active:after {width: 15px; height: 18px; background-position: -105px 0; }
+.bottom_filter .fil_price:after, .bottom_filter li.fil_price:active:after {width: 18px; background-position: -121px 0; }
+.bottom_filter .fil_sort:after, .bottom_filter li.fil_sort:active:after {width: 18px; height: 18px; background-position: -140px 0; }
+
+/* = global = */
+.font_red, .bluetext, .font_blue, .pro_list_price, .pro_list_price i, .icon_rebate, .pro_label, .comm_fen_num,
+.cui_cldweek li:first-child, .cui_cldweek li:last-child, .cui_cld_daybox li:nth-of-type(7n), .cui_cld_daybox li:nth-of-type(7n+1),
+.hotel-tags-cut, .box_list>.act, .pro_list7_price, .pro_list7_hdinfo .score, .base-btn2,
+.base_btn01, .btn_action, .sec-net-bad .btn-telephone,.sec-noresult .btn-telephone {color: #E65749; }
+.btn-phone, .pro-subtract, .g_btn_s, .loadFailed-box .btn-retry, .loadFailed-box .btn-call,
+.broaden a, .btn-renet {background-color: #E65749 !important; }
+.cui_cld_daybox li.cur {color: #FFF; background-color: #E65749; }
+.cui_cld_daybox li.curpass {background-color: #F7958B; }
+.cui_cld_daybox li.cur i, .cui_cld_daybox li.cur b {color: #F5D3D9; }
+.icon_rebate {box-shadow: 0 1px #E65749 inset, 0 -1px #E65749 inset; }
+.pro_label, .base-btn2 {border-color: #E65749; }
+
+/* = header = */
+#headerview, .cm-header, header h2, header h1, .cm-page-title, .cm-header-icon {background-color: #E65749 !important; }
+.cm-header .cm-header-icon:active, .cm-header .cm-header-btn:active {background-color: #CF3E30 !important; }
+
+/* = detail header = */
+.headerview_bgcolor {background-color: #E65749; }
+.headerview_detail .returnico:after {background-color: rgba(0,0,0,.8); }
+.headerview_detail .icon_share:after, .headerview_detail .icon_fav:after, .headerview_detail .icon_unfav:after {background-color: rgba(0,0,0,.8); }
+.headerview_bgcolor .returnico:after, .headerview_bgcolor .icon_share:after {background-color: #E65749; }
+.headerview_bgcolor .returnico:before {border-color: #FF5555; }
+.headerview_detail .icon_fav:before {background-position: -133px 0; }
+.headerview_detail .icon_unfav:before {background-position: -109px 0; }
+.headerview_detail .icon_share:before {background-position: -156px 0; }
+.headerview_detail header {box-shadow: none; }
+/* = detail color = */
+.tuan_detail_buy .price_2, .view_unfold, .view_unfold_arr, .view_fold, .detail_list_other .price3, .linktips span,
+.detail-modebox .hd .more, .detail_htl_info .htl_price, .detail_list .actmore, .detail_around_list .around_price, .detail_list .table_desc .price3 {color: #E65749; }
+.tuan_detail_buy .buybtn, .detail_htl_btn, .tuan_pic .navitem .cur {background-color: #E65749; }
+.tuan_detail_buy .buybtn, .detail_htl_btn {box-shadow: none; }
+.subblist_detail .subblist_map, .icon_txt {color: #999; }
+.btnphone i {border-color: #E65749; }
+.view_unfold:after, .view_unfold_arr:after, .view_fold:after {box-shadow: inset 2px -2px 0 #E65749; }
+.tuan_detail_buy .buybtn-price .price2 {background-color: #CF3E30; }
+#J_elongTel a {display: block; }
+
+
+/* = loading = */
+.loading-layer2 {background: url(//m.elongstatic.com/static/webapp/hotel/2015/09/v3/img/loading3.gif) 50% 16px no-repeat rgb(255, 255, 255); background-size: 70px 78px; }
+.loading-layer2 .loading-layer2-before, .loading-cycle, #cp-h5-text {display: none !important; }
+.pro_list li img, .detail_htl_list img, .pro_list7 li img {background: #ECECEC url(//m.elongstatic.com/static/webapp/hotel/2015/09/v3/img/loadingimg.gif) no-repeat center center; background-size: 80% auto; }/*列表页图片loading*/
+.tuan_pic:after {background-image: none; }/*详情页图片隐藏loading*/
+.cp-Network-loading p {font-size: 0 !important; }/*reloading的海豚去除*/
+.loading_error:before {background: none; height: 1px; }/*网络问题*/
+.ui-loading:before {background: none; }/*迷你海豚loading*/
+.cui-i, .cui-i:before {background: none !important; }/*列表页拉到底部加载*/
+
+/* = search = */
+.index_search {background-color: #E65749; }
+
+/* = filter = */
+.bottom_filter {color: #777; border-top: 1px solid #C8C8C8; background-color: #F7F7F7; }
+.bottom_filter .fil_active, .bottom_filter li:active {color: #E65749; }
+.pop_filter_baselist .choosed {color: #FF5555; }
+.pop_filter_baselist .choosed:before {border-color: #FF5555; }
+.pop_filter_clear, .pop_filter_clear.sta-disabled {color: #FFF; border-color: #CF3E30; background-color: #CF3E30; }
+.pop_filter_baselist2 .choosed {color: #E65749; }
+.pop_filter_btnbar, .hotel-p-s-filter dd.current {background-color: #E65749; }
+.pop_filter_label :checked + label, .pop_filter_label label:before, .hotel-p-s-filter dd.current, .hotel-p-s-filter .check.current:before,
+.hotel-p-s-filter .check.current:after, .pop_filter_baselist2 .choosed:before {border-color: #E65749; }
+.cur_pos {color: #999; background-color: #FCFCFC; }
+.cur_pos_has:after {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAAAdVBMVEWsrKz///+srKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKz0VQAUAAAAJnRSTlMAAAMGCRseKi0zNkFES1RXWVxdZmlsb3V4mZ+izM/S1djb5+r1+GaOLh4AAADQSURBVCjPnZLLcsIwEARnLWNiHg4GwtsGS9D//4k5KA4KdiVV6eP2QdrZkSJuebwAl+PSWSTOs42nx2+ypykaUpqiN6UHukMJlIcO8GU0kwCsJQGSrYEwMZNcA4+Fvo0tHtA4k/bAXImxObA35R5qPTEzqyHkqqDTi7EbVDrBbmB2cFILbwMzhau+tktMP/mPucJ0/J3z2N8+4KwKbmP7vCsPsHoxKwj5L7nJtXD/kfUdWmeSikAMNZoaCEW86Wxw09mfPZCybdKdbdKd0b59Ai2yJr/XRIpLAAAAAElFTkSuQmCC) 0 0 no-repeat; background-size: 12px auto; }
+.cur_reload {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAnCAMAAABdVGpDAAAA0lBMVEWsrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKwwMtLqAAAARXRSTlMAAwYJDA8SFRgbHiEnKi0wNj9CRUhLTlFUV1pgY2xve36Eh42Tlpmcn6Klq66xtLe6vcDGyczP1djb3uHk5+rt8PP2+fzalwXNAAABQklEQVQYGYXBC0PBUBgG4Le5ny5LSCiSFCLdJnTZ5Lz//y/lO26bzTwPwnpJHMLxCQ4gZ1XE48K9hTgUjkKUxGXbcbSm4ZYQcvb0x4DmEQLUI0Nes/ApuIwwxNaNZphuWtioM8L4HFsFzaVxM68AGq0EtnIejWkFBhemefh1aQxTWCL5kISfrSmej7DCnyKC+hSTFNb6GQQl/iiusN8lxSdidCjuEOODIo8YvxQKMeYUFmLMKdKI4VKcIIrHBRcORRURchQjdCh6iHBN0UGNwksh7J2ihoymuEVIiUJngT7F7BQ7Ml8UAwC2phinEWC9UGgbCz0aEwWf9BuNHoSa0XDrFtauv2nMFIwKV75bhWPg+OLuiytVrDS4RwMbdc0Iug6foscQr4gA1eWOrsIuezDnxnxgI0qy3HZG5Mhpl5PY+gcaQYBmd6hKMgAAAABJRU5ErkJggg==) 0 0 no-repeat; background-size: 17px auto; }
+.quick-pick .qp-bar {background: #FFF; }
+.quick-pick .qp-bar:first-child:before, .quick-pick .qp-bar:last-child:before {content: ""; position: absolute; left: 10px; top: 9px; width: 16px; height: 18px; background: #FFF url(//pic.c-ctrip.com/h5/tuan/spr_index.png) 0 0 / 250px auto no-repeat; background-position: -206px -232px; }
+.quick-pick .qp-bar:first-child:before {top: 10px; width: 12px; height: 16px; background-size: 500px auto; background-position: -65px -295px; opacity: .4; }
+
+/* = 需要隐藏的项 = */
+.J_checkboxWrap, .pro_list_label, .index_search .ins_type_search .ins_type:after, .loadFailed-animate .text:before,
+.cp-Network-loading .loading-animate, .headerview_detail #J_favBtn, #J_shopErrorBtn, .hotel-detail-pic:after,
+.loadFailed-animate, .loadFailed-animate .bubble, .loadFailed-animate .l-hand, .loadFailed-animate .r-hand,
+.loadFailed-animate .eyebrow, .loadFailed-animate .tail, .loadFailed-animate .tear, .loadFailed-animate .text,
+.map_type .dining, .map_type .entertain, .map_type .vacation, .map_type .shopping, .box-city-all .city_list li span {display: none !important; }
+
+/* 20160224系统加价 */
+.pop-raise-price-box{ position: fixed; bottom:0; left:0; width:100%; background-color:#fff;}
+.pop-raise-price-box .raise-hd{ height:40px; line-height:40px; color:#999; border-bottom:1px solid #efefef; font-size:14px; padding-left:10px; position: relative;}
+
+.raise-hd .close { width: 40px; height: 40px; float: right; line-height: 40px; color: transparent; text-align: center; font-weight: 700; position: relative; cursor:pointer;}
+.raise-hd .close:before,.raise-hd .close:after { width: 2px; height: 16px; position: absolute; left: 50%;top: 50%; margin: -8px 0 0 -1px; background: #e5e5e5; content: "";}
+.raise-hd .close:after {-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg); transform: rotate(-45deg);}
+.raise-hd .close:before { -webkit-transform: rotate(45deg);  -moz-transform: rotate(45deg);  -ms-transform: rotate(45deg); transform: rotate(45deg);}
+.raise-price{ padding:10px 10px 0 10px; overflow:hidden;}
+.raise-price .raise-txt{ background-color:#e8e8e8;border-radius: 5px; padding:8px 10px 5px; line-height:25px; margin-bottom:15px; overflow:hidden; color:#4e5f71;}
+.raise-price .raise-txt .price{ font-weight:normal; color:#E65749; font-size:15px; float:right; line-height:25px;}
+.raise-price .raise-txt .price dfn{ margin-right:2px;}
+.raise-price .active{ border:1px solid #E65749; background-color:#fff; padding:7px 8px 4px;}
+
+.raise-btn{ overflow:hidden;}
+.raise-btn .btn-cancel{ width:50%; float:left; text-align:center; color:#fff; background-color:#a09d9d; font-size:13px; padding:9px 0 10px; }
+.raise-btn .base-btn3{ float:left; width:50%; text-align:center; background-color:#E65749}

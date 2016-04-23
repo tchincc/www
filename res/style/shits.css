@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/* 20160121我要吐槽 */
+.shits-box{ padding: 15px 10px 10px; text-align: center;;}
+.shits-box .shits-pic{ border: 1px solid #d4d4d4; background-color: #fff; padding: 3px; width: 140px; height: 140px;}
+.shits-txt{ text-align: left; color: #4e5f71; padding-top: 10px;}
+.shits-weixin-box{ border-top: 1px solid #efefef; border-bottom: 1px solid #efefef; background-color: #fff; padding: 15px 10px 17px;}
+.shits-weixin{ padding-bottom: 15px; font-size: 17px;}
+.shits-weixin-box .base-btn{ width: 60px; margin-left:10px; font-size: 12px;}

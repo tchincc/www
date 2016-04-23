@@ -1,0 +1,94 @@
+<ul class="pro_list pro_list8 index_hot pro_list_m subOpacity-fade-in">
+
+<%
+        //seo访问时，这个都没有
+        let {products, count} = data;
+        isShowMore = (typeof isShowMore == 'undefined' ? false : isShowMore);
+
+        if(typeof products!="undefined" && products && products.length>0 && count && +count > 0) {
+        for(var i=0, len=products.length; i < len; i++){
+            var p=products[i];
+            var labelsNum = p.labels && p.labels.length;
+            var tablabel = p.tablabel && p.tablabel[0];
+            var isIntensifyPrice = p.activities && p.activities[0] && p.activities[0].type == 1; //是否强化立减价
+            var h4title = p.hotelname || '';
+            var subtit = p && p.name || '';
+            var isOnlineBookin = tablabel && tablabel.labelTxt === '在线预订'; // 是否有在线预订标签
+            var isDiyshx = p && p.typeFlag === 4;
+            var sdpid = p && p.kingurl;
+            var distance = p.distance>=1 ? p.distance.toFixed(1)+'km' : p.distance*1000+'m';
+            var labels = p && p.labels;
+            var labelTxt = labels && labels[0] && labels[0].labelTxt;
+            var district = p.descriptionhead && p.descriptionhead.substr(0,6);
+            var isOnlineHotel = +p.typeFlag === 1;
+            var score = p && p.score;
+            var star = p && p.star;
+            var sold = p && +p.cSold;
+            var isHeadLine = p && p.isheadline;
+            var curPrice = p.price && +p.price.dPrice;
+            var offPrice = p.price && +p.price.oPrice;
+            var oriPrice = p.price && +p.price.cPrice;
+            var h5title = (p.descriptionhead && p.name.indexOf('【多店通用】') == -1 ? '[' + p.descriptionhead.substr(0,6) + ']' : '') + (p.name || p.hotdescription || '');
+%>
+        <li data-id="<%=p.id %>" <% if (isDiyshx) { %>data-type="diyshx" data-sdpid="<%= sdpid %>"<% } %>>
+        <div class="pro_list_imgbox">
+            <img data-img="<%=i %>" onerror="javascript:noPic(this);" src="//pic.c-ctrip.com/common/pic_alpha.gif" data-has-img="<%=p.imgUrl?'true':'false' %>" />
+            <% if (isHeadLine) { %>
+            <span class="week-tag-icon">本周推荐</span>
+            <% } else if (tablabel) { %>
+            <span class="pro_list_label <%= isOnlineBookin ? 'pro-list-book-label' : ''%>"><%=tablabel.labelTxt%></span>
+            <% } %>
+        </div>
+        <div class="pro_list_info">
+            <h4 class="pro_list_tit">
+                <% if (isHeadLine) { %>
+                <i class="week-icon"></i>
+                <% } %>
+                <%=h4title%>
+            </h4>
+            <% if (subtit) { %>
+            <p class="pro_list_subtit fcomml"><%= subtit %></p>
+            <% } %>
+            <p class="pro_list_pp ellips">
+                <% if (labelTxt) { %>
+                <span class="pro_label fr"><%= labelTxt %></span>
+                <% } %>
+                <% if (district) { %>
+                <%= district %>
+                <% } %>
+                <% if (district && (star || score)) { %>
+                <span class="split">|</span>
+                <% } %>
+                <% if (star) { %>
+                <%= star %>
+                <% } %>
+                <% if (star && score) { %>
+                <span class="split">|</span>
+                <% } %>
+                <% if (score) { %>
+                <span class="font_blue"><i><%= score %></i>分</span>
+                <% } %>
+            </p>
+            <p class="pro_list_ext">
+                <% if (sold && sold !== 0) { %>
+                <span class="pro_list_sold fr">已售<%= sold %></span>
+                <% } %>
+
+                <%if(isIntensifyPrice){%>
+                <span class="pro-subtract fl">立减价<dfn>&yen;</dfn><em><%= curPrice %></em></span>
+                <%}else{%>
+                <span class="pro_list_price fl"><dfn>&yen;</dfn><i><%= curPrice %></i></span>
+                <%}%>
+                <% if (oriPrice) { %>
+                <del class="fl"><dfn>&yen;</dfn><%= oriPrice %></del>
+                <% } %>
+            </p>
+        </div>
+        </li>
+        <%
+        }
+        }%>
+    </ul>
+    <%if(isShowMore){%>
+    <div data-type="0" class="base_btn01 btn_more J_btnMore" data-ubt-key="c_show_more_recommend_group">查看更多推荐团购</div>
+    <%}%>

@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+body, h1, h2, h3, h4, h5, h6 {font-family: "Microsoft Yahei", "simsun", arial; font-weight: 400; }
+.noimg {background: #EFEFEF url(//pic.c-ctrip.com/h5/tuan/noimg.png) no-repeat center center; }
+.tc {text-align: center; }
+.btn_comm {padding: 3px 10px; font-size: 16px; color: #FFF; border-radius: 5px; background-color: #FB7900; }
+.btn_cblue, .btn_disable {font-size: 15px; color: #FFF; background-color: #029BDE; }
+.btn_disable {background-color: #CCC; }
+.p_primary dfn {padding-right: 2px; font-size: .8em; }
+.p_comm {color: #FB7900; font-size: 18px; }
+.p_origin {font-size: 11px; color: #999; vertical-align: text-bottom; padding-top: 5px; }
+.p_sold {position: absolute; right: 10px; bottom: 10px; width: 78px; height: 7px; border: 1px solid #FEC791; border-radius: 5px; }
+.p_sold em {display: block; height: 7px; background-color: #FBA551; }
+.p_sold em:before {content: attr(data-sold); position: absolute; left: -76px; top: -6px; width: 70px; text-align: right; font-size: 10px; color: #454444; }
+.arr_w {display: inline-block; width: 10px; height: 10px; box-shadow: 1px 1px #999; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+.l_txt {font-size: 12px; color: #a0a0a0; white-space: nowrap; -webkit-transform: scale(.9); transform: scale(.9); }
+.c_ora {color: #fb7900; }
+.i_info {position: relative; display: inline-block; width: 10px; height: 10px; margin-right: 3px; border: 1px solid #999; border-radius: 50%; }
+.i_info:before, .i_info:after {content: ""; position: absolute; width: 2px; background-color: #999; }
+.i_info:before {left: 4px; top: 1px; height: 5px; }
+.i_info:after {left: 4px; bottom: 1px; height: 2px; }
+
+.l_rotater_wrap, .l_miao_wrap .tit, .l_miao li {background-color: #FFF; box-shadow: 0 1px 3px #ddd; }
+/* = 头部banner图 = */
+.l_miao_wrap {margin-bottom: 10px; }
+.l_banner {position: relative; overflow: hidden; }
+.l_banner img {display: block; width: 100%; }
+.l_banner .navitem {position: absolute; z-index: 1; left: 0; bottom: 8px; width: 100%; height: 9px; overflow: hidden; text-align: center;}
+.l_banner .navitem i {display: inline-block; width: 9px; height: 9px; overflow: hidden; vertical-align: top; margin: 0 3px; background-color: rgba(255,255,255,0.8); border-radius: 50%;}
+.l_banner .navitem .cur {background-color: rgba(9,159,222,0.7);}
+.l_icon {-webkit-animation: icon-bounce 5s ease-out infinite; animation: icon-bounce 5s ease-out infinite; position: relative; display: inline-block; vertical-align: middle; margin-right: 6px; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAAA4AgMAAAB73sUMAAAACVBMVEX7eQD/gw4AAADWgiiBAAAAA3RSTlP//wDXyg1BAAABW0lEQVQ4y7XUPW6FMBAE4BFVxClezX3GhQ8Q6e0puIR7GkvsnDKFFwgYEilSXPrTGrM/hh7WAkmqZI6NeYjdToBRKzAdYg1WYNACjCEqeT8d0Nz4IsOCCcNyI6PwgWm9lRnQWdyaLBgOcVKqWdIyaMWo7TtOkvIkaYVWjJrj1oUkc6WkFZMwavsfkiTLpyRhEKYlclCbsOUNABB5K2QqZNqTAAxNyCzViFkBAKO0QE7KJdIkHOsFVWa5qTKHTGEqNLnJmeKoabtFSS0zZZcthmxCXsS5ndbLW3KTv2lnqVRU4AfJF0mblIuUZ8m7pCep/yu01lHOu5iSJdV0nqw/S7Unkb7fbf6WtxiIm1z/Il19+CTOdwO/VtvjLXBeRdHqfb8pxuOmR8sW00mlySVnvoozyU2FdhWR5uakOimkG5l6idnOvWgf+k5KhJzm9AVF0PFOtMrtb5V1r/IXKo4X91U6UNMAAAAASUVORK5CYII=) no-repeat 0 0; background-size: 49px auto; }
+.l_i1 {float: left; top: -6px; width: 24px; height: 28px; }
+.l_i2 {float: left; top: 2px; width: 24px; height: 27px; background-position: -26px 0; animation-delay:2s}
+
+/* = 秒杀区 = */
+.l_miao_wrap .tit {height: 18px; line-height: 18px; font-size: 18px; padding: 8px 10px; margin-bottom: 8px; }
+.l_miao_wrap .tit .fr {color: #58595B; font-size: 16px;}
+.l_miao li {position: relative; padding: 6px 10px; overflow: hidden; margin-bottom: 8px; box-shadow: 0 1px 3px #ddd; }
+.l_miao li img {width: 100px; height: 78px; margin-right: 12px; border-radius: 5px; overflow: hidden; background-size: 50%; }
+.l_miao h3 {font-size: 15px; line-height: 1; height: 2em; }
+.l_miao .btn_comm {width: 4.2em; }
+.l_miao_info {overflow: hidden; }
+.l_time {color: #454444; font-size: 11px; clear: both; text-align: right; padding-top: 3px; }
+.l_time .t {color: #fd8612; }
+.unlocked .p_origin {display: block; line-height: 1; }
+
+/* = 转盘区 = */
+.l_rotater_wrap {position: relative; padding: 6px 12px 12px 12px; margin-bottom: 5px; }
+.l_rotater_wrap .tit {font-size: 18px; }
+.l_rotater_wrap>p {position: relative; z-index: 2; font-size: 16px; }
+.l_rotater_wrap .btn_comm {display: inline-block; width: 38%; padding-left: 0; padding-right: 0; }
+.l_rotater_wrap .btn_comm:first-child {margin-right: 24px; }
+.l_rotater {position: relative; z-index: 1; min-height: 300px; margin-bottom: 15px; }
+.l_rotater em {position: absolute; left: 50%; top: 50%; z-index: 5; width: 72px; height: 96px; margin: -42px 0 0 -36px; background: url(//pic.c-ctrip.com/h5/tuan/promotion/tapper_new.png) no-repeat 0 0; background-size: 72px auto; -webkit-transform-origin: 50% 59.5px; transform-origin: 50% 59.5px; }
+/*.l_rotater:before, .l_rotater:after {position: absolute; z-index: 1; content: ""; border-radius: 50%; }
+.l_rotater:before {width: 340px; height: 340px; background-color: #F1EFEF; }
+.l_rotater:after {width: 300px; height: 300px; background-color: #E5E4E4; }*/
+.l_rotater img { overflow: hidden; }
+
+/* = 中奖后弹层 = */
+.l_pop {display: none; position: absolute; z-index: 99; top: 30%; left: 50%; width: 70%; line-height: 30px; padding: 16px 25px 10px 25px; border: 1px solid #DEDEDE; border-radius: 10px; background-color: #F8F7F7; box-shadow: 1px 1px 3px #666; -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+.l_pop h3 {font-size: 16px; margin-bottom: 15px; }
+.l_pop_form {font-size: 12px; padding-left: 44px; }
+.l_pop_form input {width: 100%; height: 24px; line-height: normal; border: 1px solid #ccc; background-color: #FFF; }
+.l_pop_form label {width: 4em; line-height: 24px; text-align: right; margin-left: -4.5em; }
+.l_pop_form p {margin-bottom: 10px; }
+.l_pop_form .i_info {top: 1px; }
+.l_pop_form .btn_comm {display: block; width: 110px; margin-top: 5px; }
+.l_pop.open {display: block; }
+.l_pop.open + .popmask {position: absolute; z-index: 98; left: 0; right: 0; top: 0; bottom: 0; background-color: rgba(0,0,0,.6); }
+
+/* = animations = */
+@-webkit-keyframes scaler {
+	0% {-webkit-transform: scale(1); }
+	50% {-webkit-transform: scale(.95); }
+	100% {-webkit-transform: scale(1); }
+}
+@keyframes scaler {
+	0% {transform: scale(1); }
+	50% {transform: scale(.95); }
+	100% {transform: scale(1); }
+}

@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/**
+ * 为防止压缩打包时出错，请CSSer留意一下: 不要使用单引号
+ */
+
+/* = 搜索框 = */
+.index_search .ins_input.ins_type_search {padding-left: 50px;}
+.search_wrap {position: relative; top: 0; z-index: 501; height: 44px; border-bottom: 0; padding:0; overflow: visible; -webkit-animation: secDown .5s ease; animation: secDown .5s ease;}
+.search_wrap .history_close {position:static; display: block; float:right; width: 40px; height: 28px; line-height: 29px; font-size: 13px; color: #fff; text-align: center; margin-left:10px;}
+.search_wrap .index_search {top: 0; padding-top: 8px;}
+.search_wrap input::-ms-clear {display:none;}
+.search_wrap input::-webkit-search-cancel-button {-webkit-appearance:none;}
+.search_wrap .s_city_loading {right: 90px; top: 10px; overflow: hidden;}
+
+.sta-pop {position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 3000; width: auto; background-color: #F4F4F4; }
+._secDown {-webkit-animation: _secDown .5s ease; animation: _secDown .5s ease;}
+
+/* = 浮层图标 = */
+.icon-more_my_hotel, .icon-more_my_tick, .icon-more_my_trip, .icon-more_my_food {background: url(//pic.c-ctrip.com/h5/tuan/spr_link.png) no-repeat 0 0; background-size: 175px auto; }
+.icon-more_my_hotel {left: -2px; width: 18px; height: 14px; margin-left: 4px; background-position: -91px -86px;}
+.icon-more_my_tick {width: 22px; height: 15px; background-position: -111px -85px;}
+.icon-more_my_trip {width: 20px; height: 20px; margin-left: 2px; background-position: -135px -82px;}
+.icon-more_my_food {left: -4px; width: 13px; height: 20px; margin-left: 9px; background-position: -158px -82px;}
+
+.his_list {margin-bottom: 10px; padding-bottom: 3px; background-color: #fff;}
+.his_list .title {line-height: 32px; text-indent: 15px; color: #999;}
+.switch_hot {width:100%; overflow:hidden; position:relative;}
+.switch_hot .sw_clip {width:100%; min-height: 43px; max-height: 86px; overflow: hidden; margin: 0 auto; position: relative; -webkit-transition: -webkit-transform 550ms ease-in-out;}
+.switch_hot .sw_con {float:left; width: 100%;}
+.switch_hot .sw_con li {position: relative; float:left; margin-bottom:7px; width: 30%; height: 36px; line-height: 36px; text-align: center; overflow: hidden; word-wrap:break-word; border-radius: 6px;
+box-shadow: 0 0 1px 0 #666 inset;}
+.switch_hot .sw_con li:nth-of-type(3n+1) {margin-left:3%;}
+.switch_hot .sw_con li:nth-of-type(3n+2) {margin-left: 2%; margin-right: 2%;}
+.switch_hot .sw_con li:nth-of-type(3n+3) {margin-right:3%;}
+.switch_hot .sw_con li:active {color: #099fde;}
+.switch_hot .sw_con li:active {box-shadow: 0 0 1px 0 #06c inset;}
+.switch_hot .sw_nav {text-align: center;}
+.switch_hot .sw_nav i {display: inline-block; width: 10px; height: 10px; overflow: hidden; background-color: #ddd; border-radius: 50%; margin: 3px 5px 9px 5px; vertical-align: top;}
+.switch_hot .sw_nav .current {background-color: #099fde;}
+/* = 搜索结果 = */
+.searchresult li {padding-left: 0; background-position:left bottom;}
+.searchresult li .cate {float: right; font-size: 15px; padding: 0 10px; margin-left: 0; margin-top: 1px; background-color: #fff;}
+.searchresult li .search-tit {color: #4E5F71; padding-left: 15px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; word-break:keep-all;}
+.searchresult .map-locate-tit:before {content: ""; position: absolute; top: 50%; left: 18px; width: 12px; height: 18px; background-position: 0 -60px; background-size: 600px auto; -webkit-transform: translateY(-50%); transform: translateY(-50%);}
+.searchresult .map-locate-tit .search-tit {padding-left: 30px;}
+/* = 弹层搜索 = *//* = 搜索 = */
+/* = 城市列表border = */
+.city_box .m_BorderRadiusWrap li {padding-left: 0; border-bottom: 0; box-shadow: 0 0 1px #666;}
+.city_box .m_BorderRadiusWrap li:before {border: 0 none;}
+.city_list {background-color:#fff;}
+.city_list li {position: relative; height:44px; line-height:44px; font-size: 15px; padding-left: 10px; overflow:hidden; border-bottom: 1px solid #efefef; text-overflow:ellipsis; white-space:nowrap; word-break:keep-all;}
+.city_list li:active,.searchresult li:active .cate {background-color:#f5f5f5;}
+.city_list li span {color: #999; font-size: 12px; margin-left: 5px;}
+.city_list .highlight,.city_list .highlight span,.searchresult em {color: #ff9913;}
+/* = 城市选择 = */
+.city_noresult {padding-top:20px; padding-bottom:20px; background-color:#fff; color:#ccc; text-align:center; background-image:-webkit-linear-gradient(top, transparent 50%, #ddd 50%); background-repeat:repeat-x; background-size:100% 1px; background-position:left bottom;}
+.city_type,.box-city-all .ui-title {padding-left:10px; background-color:#efefef;}
+.city_type {font-size:12px; font-weight: 400; line-height: 25px;}
+.box-city-all .ui-title { font-size:14px; line-height: 44px;}
+.box-city-all .arr_down:after {margin-top: -7px;}
+.box-city-all .arr_up:after {margin-top: -9px;}
+.box-city-all .ui-title.arr_down+dd {display: none;}
+.m_BorderRadiusWrap li {position: relative; text-align: center; -webkit-box-sizing:border-box; box-sizing:border-box; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 2px; border-radius: 4px;}
+.m_BorderRadius:before,.m_BorderRadiusWrap li:before {position:absolute; top:0; left:0; width:200%; height:200%; border:1px transparent solid; content: ""; -webkit-box-sizing:border-box; box-sizing:border-box; -webkit-transform:scale(0.5); transform:scale(0.5); -webkit-transform-origin:0 0; transform-origin:0 0; border-radius: 8px;}
+.m_BorderRadiusWrap {overflow: hidden;}
+.m_BorderRadiusWrap li {float: left;}
+.m_BorderRadiusWrap_city, .box-city-all .ui-title.arr_down {
+ background: -webkit-linear-gradient(top, transparent 50%, #bcbcbc 50%) no-repeat left bottom;
+ background-size: 100% 1px;}
+.m_BorderRadiusWrap_city {background-color: #fff; font-weight: 400; color: #666; padding: 10px 10px 1px; margin-right: 18px;}
+.m_BorderRadiusWrap_city li {margin-right: 3.2%; width: 31%; height: 30px; line-height: 30px; margin-bottom: 10px;}
+.m_BorderRadiusWrap_city li:before {border-color: #bbb;}
+.m_BorderRadiusWrap_city li:nth-of-type(3n) {margin-right: 0;}
+.m_BorderRadiusWrap_city li:active:before {background-color: rgba(0,0,0,.3);}
+.m_BorderRadiusWrap_city .ui-loading-inline .ui-loading {-webkit-transform-origin: 5px 10px; -webkit-transform: scale(.5, .5); min-height: 30px; padding-left: 28px;}
+.m_BorderRadiusWrap_city .wraploading {width: 65.6%; float: none; color: #999;}
+.m_BorderRadiusWrap_city .wraploading+li {margin-right: 3.2%;}
+/* = 城市选择首字母索引 = */
+.hotel-tags-cut { width: 28px; height: calc(100% - 48px); padding: 2px 0 0; box-sizing: border-box; position: fixed; z-index: 99; top: 48px; right: 0; padding-top: 90px; background-color: rgba(255,255,255,.5); text-transform: uppercase; color: #099fde; font-size: 12px; text-align: center;}
+.hotel-tags-cut li { position: relative; height: 3.448275%;}
+.hotel-tags-cut .tags:before { content: ""; width: 0; height: 0; position: absolute; right: -20px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); border-width: 10px; border-style: solid; border-color: transparent transparent transparent rgba(82,188,232,.8);}
+.hotel-tags-cut li:before,.hotel-tags-cut .tags:after { content: attr(data-value)}
+.city-group-tip{font-size: 20px;  color: #FFF; line-height: 3em;  height: 3em;  width: 3em;  background-color: rgba(0,0,0,.5);  position: fixed;  top: 50%;  margin-top: -30px;  left: 50%;  margin-left: -30px;  text-align: center;  z-index: 1000;  font-weight: bolder;  border-radius: 3px;  display: none;  transition: opacity 1s cubic-bezier(0.1,.57,.1,1);  -webkit-transition: opacity 1s cubic-bezier(0.1,.57,.1,1); opacity: 0;}
+/* = 搜索引导，不久删除 = */
+.search-tip {position: absolute; left: 2px; top: 4px; z-index: 3888; width: 295px; height: 149px; background: url(//pic.c-ctrip.com/h5/tuan/search_tip.png) no-repeat; background-size: 295px 149px;}
+/*  20150923 */
+.searchresult-list li{ height:auto; line-height:18px; padding:14px 10px 10px;}
+.searchresult-list li .search-tit{ padding-left:0;}
+.searchresult-list li .search-tit h6{float: left; max-width: 100%; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; word-break: keep-all; padding-right: 30px; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.searchresult-list li .search-tips{ color:#999; font-size:11px;}
+.searchresult-list li .col-blue{ color:#099fde}
+.searchresult-list li .fruit{ float:right; color:#099fde; font-size:12px; margin-right: -30px; }
+/* 搜索信息化 */
+.search-info-hd{ border-bottom:1px solid #ddd; background-color:#f6f6f6; padding:10px 10px 8px; position:relative;}
+.search-info-hd h6{ padding-left:20px; font-size:13px; color:#666;}
+.search-info-hd h6:after{ width:16px; height:16px; position:absolute; left:10px; top:11px;  background: url(//pic.c-ctrip.com/h5/tuan/spr_link.png) no-repeat -115px -45px; background-size:175px auto; content: "";}
+.search-info-hd .empty{ position:absolute; right:10px; top:10px; color:#099fde;}
+.info-list { overflow:hidden;}
+.info-list li{ float:left; width:25%; background-color:#fff;}
+.search-info-hd h6.hot-icon:after{ background-position: -137px -45px}
+.search-info-hd h6.business-icon:after{ background-position: -158px -45px}
+.search-info-hd h6.brand-icon:after{ background-position: -115px -66px}
+.search-info-hd h6.feature-icon:after{ background-position: -137px -66px}
+.search-info-hd .arrow-up,.search-info-hd .arrow-down{ position:absolute; right:10px; top:10px; width:30px; height:20px; text-align: right;}
+.search-info-hd .arrow-up:before, .search-info-hd .arrow-down:before {content: ""; display: inline-block; width: 8px; height: 8px; border: 2px solid transparent; border-width: 0 2px 2px 0; border-color: #bfbfbf; -webkit-transform: rotate(45deg); transform: rotate(45deg);}
+.search-info-hd .arrow-down:before {border-width: 2px 0 0 2px;}
+.search-mask {position: fixed; top: 0;left: 0; bottom: 0; right: 0; z-index: 3888;background-color: rgba(0,0,0,.8);}
+@-webkit-keyframes rtl-move { 0% { -webkit-transform: translate3d(200%,-50%,0); opacity: .55;}
+ 40% { -webkit-transform: translate3d(0,-50%,0); opacity: 1;}
+ 100% { -webkit-transform: translate3d(0%,-50%,0); opacity: 0;}
+}
+@keyframes rtl-move {
+ 0% { -webkit-transform: translate3d(200%,-50%,0); opacity: .55;}
+ 40% { -webkit-transform: translate3d(0,-50%,0); opacity: 1;}
+ 100% { -webkit-transform: translate3d(0%,-50%,0); opacity: 0;}
+}
+@media (max-height: 480px) {
+ .hotel-tags-cut li { height:4.5454%;}
+ .hotel-tags-cut li:nth-of-type(2n+2) { height: 2.2727%;}
+ .hotel-tags-cut li:nth-of-type(2n+2):before { content: attr(cc);}
+ .hotel-tags-cut li:nth-of-type(2n+2):after { content: ""; width: 4px; height: 4px; border-radius: 50%; background-color: #099fde; position: absolute; left: 50%; -webkit-transform: translate3d(-50%,3px,0); transform: translate3d(-50%,3px,0);;}
+}

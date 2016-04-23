@@ -1,0 +1,553 @@
+@charset "UTF-8";
+/**
+ * 为防止压缩打包时出错，请CSSer留意一下: 不要使用单引号
+ *//* = 详情页-标题 = */
+.detail_tit {position: absolute; bottom: 0; left: 0; right: 0; z-index: 2; padding: 4px 44px 4px 12px;}
+.detail_tit h1, .detail_tit p {color: #fff; line-height: 1.3;
+overflow:hidden; text-overflow:ellipsis; white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-break:break-all;}
+.detail_tit h1 {font: 17px/1.2 "Microsoft Yahei";}
+.detail_tit h1 em {display: inline-block; font-size: 11px; margin-left: 1em;}
+.detail_tit p {font-size: 12px;}
+.detail_tit_picnum {position: absolute; right: 0; bottom: 0; z-index: 2; font-size: 13px; line-height: 1; color: #A7A5A5; padding: 5px 12px; background-color: rgba(0,0,0,.5);}
+.detail_tit_shadow {position: absolute; bottom: 0; left: 0; right: 0; z-index: 1; height: 80px; background: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.7) 100%);}
+/* = 详情页-头部 = */
+.headerview_detail {position: fixed; z-index: 101; left: 0; top: 0; width: 100%; -webkit-transition: background-color 0.5s; transition: background-color 0.5s;}
+.headerview_detail header {position: relative;/*华为荣耀 fixed bug*/
+	background-color: transparent; -webkit-box-sizing: border-box; box-sizing: border-box; padding-right: 6px;}
+.headerview_detail .returnico:after,.headerview_detail .icon_share:after,.headerview_detail .icon_fav:after,.headerview_detail .icon_unfav:after {background-color: rgba(9,159,222,0.6); width: 30px; height: 30px; content: ""; position: absolute; left: 6px; top: 9px; z-index: 1; border-radius: 50%;}
+.headerview_detail .returnico:after {left: 16px;}
+.headerview_bgcolor {background-color: rgba(9,159,222,1);}
+.headerview_bgcolor .returnico:after,.headerview_bgcolor .icon_share:after,.headerview_bgcolor .icon_fav:after,.headerview_bgcolor .icon_unfav:after {background-color: transparent;}
+.headerview_detail_app {padding-top: 20px;}
+.tuan_detail_buy .app_tuan_buy {top: 68px;}
+/* = 详情页-滚屏图 = */
+.tuan_pic { position: relative; z-index: 1; overflow: hidden; width: 100%; max-width: 100%; height: 180px; margin: 0; background-color: #e5e7e8;}
+.tuan_pic img {position: relative; z-index: 1; display: block; width: 100%; height: 180px; margin: 0 auto;}
+.tuan_pic:before {content:""; width:100%; height:100%; position:absolute; bottom:0; left:0; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAABzAgMAAAA5/JSTAAAADFBMVEXHx8fl5+jc3NzR0dLzEXoCAAACmElEQVR42u3VMW4TQRTG8U+amtnTpHBjn2IcxRRUUCxI5DLb0LtgmuQAiFjKGXwEF7iBerA8rGzitXlLYjO7bz6J/Z/gp2+e13CtlXffY93X4CuXozZWGRdoMjHMnXaS9X4D0SSojiZZsw3ai3qTSdbHBf7aVmkxyfqC5zLfnEKCNf2BFxr3PphkSZWsUHE1LKlqz6xcb0nWXsXjOrDuASLXE+sDzs70dV+S9RqHKO5+z5oucEnWiXph3eOyRk7UA+sNLq3vs4c7ekKes4c7/AqZzqtmXWMX1XnVrFugjuu8sB+L7RmxG4vuGXGNf80sXW/hFkD+Z7y5cSdhAZHy1b/z+94es0TKH9VPvqkSrExXP/MnzQUry9WX/s8ES//qp172uRMWVl2opAv6c8mzki6kdpWoks27YJlUlawLFkbpdyWfEcmZKlElqxyyzOWb2udCjrlK/0IVOuhV4rnL5uiiZeJhyVeE/lz+HJb6XKUey3byhJKl94/tNVk27QklS3euqddl2aQnlCzVuWbqLJvyhJKlOVeZgWUTnlCyFOfyWVg24QkFS22umc/EsslP2LC05irzsWzqEzYsnbmmPifLJh5Ww1KZq8zMsucclj4Lq1ZVdlbRdu75WbiS587AMkJFwcLoVFWSsEx1qiJhYXSiomFheaQiYtlGxcTC6knFxTK/vwxkrN3Vez6WqWaekAXrKVkInCzDycKYk4XAySo4WRhzshA4WWZNyULBycKWk2XWlCwUa0oWCk4WxpwsBE6WCZSs2kXJgllTsmoXJat2UbJgAiWrdlGygC0nCxNOFopAyQLiuS7oZs64sIe4gXrFs4vFhqSdiaFto4cYF8hbEWPzmnc/84OOe5zEzSOGhoaGhv67fgFpVB0aF/UhSwAAAABJRU5ErkJggg==) no-repeat; background-size: contain; background-position: center bottom;}
+.tuan_pic:after {content:""; background-image: url(//pic.c-ctrip.com/h5/tuan/loading.png); background-size: 76px 38px; background-repeat: no-repeat; background-position: -38px 0; width:38px; height:38px; position:absolute; top:25px; left:50%; margin-left:-19px; -webkit-transform: scale(2,2);}
+.tuan_pic .cont,.tuan_pic .cont li {position: relative; width: 100%; height: 180px; overflow: hidden;}
+.tuan_pic .navitem {position: absolute; z-index: 1; left: 0; bottom: 8px; width: 100%; height: 9px; overflow: hidden; text-align: center;}
+.tuan_pic .navitem i {display: inline-block; width: 9px; height: 9px; overflow: hidden; vertical-align: top; margin: 0 3px; background-color: rgba(255,255,255,0.8); border-radius: 50%;}
+.tuan_pic .navitem .cur {background-color: rgba(9,159,222,0.7);}
+.tuan_pic .endinfo {position: absolute; right: 5px; top:45px; font-size: 12px; width: 12px; color: #fefefe; line-height: 1.25; z-index: 1;}
+.tuan_pic .endinfo:before,.tuan_pic .endinfo:after {content: ""; position: absolute; top: 50%; margin-top: -4px; width: 5px; height: 5px; border-top: 2px solid #fff; border-left: 2px solid #fff; -webkit-transform: rotate(-45deg); transform: rotate(-45deg);}
+.tuan_pic .endinfo:before { left: -7px;}
+.tuan_pic .endinfo:after { left: -12px;}
+/* = 详情页-价格按钮模块 = */
+.tuan_detail_buy {position: relative; margin-bottom: 10px; border-bottom: 1px solid #efefef; background-color: #fff;}
+.tuan_detail_buy .item1, .tuan_detail_buy .item2 {padding-left: 15px; padding-right: 15px;}
+.tuan_detail_buy .item1 {position: relative; height: 50px; background-color: #fff; margin-right: 2px; line-height: 50px; overflow: hidden;}
+.tuan_detail_buy .item1_plus .buybtn-price, .tuan_detail_buy .item1_plus .sold {float: right; position: static;}
+.tuan_detail_buy .item1_plus .buybtn-price {margin-top: 5px; margin-right: -2px; padding: 0;}
+.tuan_detail_buy .item1_plus .sold {line-height: 41px; margin: 9px 9px 0 0;}
+.tuan_detail_buy .item1_plus .del_box {vertical-align: -8px;}
+.tuan_detail_buy del,.tuan_detail_buy .sold {color: #b0b0b0; font-size: 12px;}
+.tuan_detail_buy .item2, .tuan_name .item2 {position: relative; line-height: 24px; overflow: hidden; font-size: 12px; padding: 4px 15px;}
+.tuan_detail_buy .item2 {border-top: 1px dashed #e6e6e6;}
+.tuan_detail_buy .item2:before, .tuan_detail_buy .item2:after {top: -8px;}
+.tuan_detail_buy .buybtn, .tuan_detail_buy .btm_tuan_btn_dis {font-size: 16px; font-weight: 600; color: #fefefe; padding: 0 11px; height: 38px; line-height: 38px; text-align: center; border-radius: 3px; position: absolute; right: 13px; top: 5px;}
+.tuan_detail_buy .buybtn {box-shadow: 0 2px 0 #e47c15; background-color: #ff9a14;}
+.tuan_detail_buy .btm_tuan_btn_dis {box-shadow: 0 2px 0 #b3b3b3; background-color: #c7c7c7;}
+.tuan_detail_buy .buybtn-price {overflow: hidden; padding: 0;}
+.tuan_detail_buy .buybtn-price span {float: left; padding: 0 8px;}
+.tuan_detail_buy .buybtn-price .price2 {line-height: 38px; background-color: #FD7801;}
+.tuan_detail_buy .sold {position: absolute; right: 108px; top: 6px;}
+.tuan_detail_buy .price_2 {color: #ff9a14; font-size: 32px; vertical-align: -1px; font-weight: 700; margin-right: 7px;}
+.tuan_detail_buy .price_2 em {font-size: 12px; color: #777;}
+.tuan_detail_buy .price_2 i {font-size: 15px; margin-right: 2px;}
+.tuan_detail_buy .del_box {display: inline-block; vertical-align: -3px;}
+.tuan_detail_buy .del_box del {display: block; line-height: 16px;}
+.tuan_detail_buy .del_box del:first-child {color: #858585; font-size: 1.1em;}
+.tuan_detail_buy .icon_rebate, .tuan_name .icon_rebate {float: left; margin-top: 2px; max-width: 5em; min-width: 26px; background-color: #fff; white-space: nowrap; text-overflow: ellipsis;}
+.tuan_detail_buy .desc, .tuan_name .desc {display: block; overflow: hidden; color: #666; white-space: nowrap; text-overflow: ellipsis;}
+.tuan_buy_fixed {position: fixed; z-index: 101; width: 100%; left:0; top: 48px; box-shadow: 0 2px 3px 0 #e0e0e0;}
+.buy_fixed_bottom {position: fixed; left: 0; bottom: 0; z-index: 101; width: 100%; margin-bottom: 0;}
+/* = 团购标题 = */
+.tuan_name {position: relative; margin-bottom: 10px; padding: 0 15px 1px; border: 1px solid #efefef; border-width: 1px 0; background-color: #fff;}
+.tuan_name .title, .tuan_name .title_desc {display: inline-block; -webkit-box-sizing: border-box; box-sizing: border-box; max-width:100%; vertical-align: top;}
+.tuan_name .title {position: relative; font-weight: 700; font-size:17px; line-height: 24px; color: #253342; margin: 8px 0; overflow: hidden; word-break: break-all;}
+.tuan_name .title_desc {margin-top: -6px; width: 100%; color: #666; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.tuan_name .tuan_hotel_star, .tuan_name .title_desc {font-size: 13px; color: #999;}
+.tuan_name .tuan_hotel_star {float: right; line-height: 24px; font-weight: 400; margin-left: 5px;}
+.tuan_name .subblist {padding-left:0; margin: -1px -15px 0 0;}
+.tuan_name .subblist li {font-size: 13px;}
+.tuan_name .subblist:last-child {border-bottom: 0;}
+.tuan_name .subblist .align_r {position: absolute; right: 15px; top: 10px;}
+.tuan_name .info_suit_not {margin:0 5px 0 20px; color: #666;}
+.tuan_name .item2 {padding: 4px 0;}
+.tuan_name .title+.item2 {margin-top: -10px;}
+/* = 详情页-服务 = */
+.tuan_policy {font-size:12px; color: #666; margin-right:-15px; padding:12px 0 12px 0; overflow: hidden; border-top: 1px solid #efefef; margin-top: -1px;}
+.tuan_policy li {display: inline-block; font-size: 12px; width: 32%; vertical-align: middle;}
+.tuan_policy li:before {content:" "; display:inline-block; width:17px; height:17px; vertical-align: middle; margin-right:3px;}
+.tuan_policy li:last-child {width: 33%;}
+.tuan_policy li p, .tuan_policy li span {display: inline-block;}
+.tuan_policy li p {vertical-align: middle;}
+/* = 详情页-地址，电话，评分，地图 = */
+.subblist_detail {padding-left: 15px;}
+.subblist_detail>li {padding: 13px 65px 13px 0; line-height: 18px;}
+.subblist_detail .dist {display: block; font-size: 12px; color: #999; padding-left: 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.subblist_detail .subb_address:before {margin-top: 0; top: 14px;}
+.subblist_detail .subb_phone {color: #4E5F71;}
+.subblist_detail .comm_fen_num {font-size: 12px; margin-top: 2px;}
+.subblist_detail .subblist_map {right: 28px; color: #099FDE; font-size: 14px;}
+.btnphone {position: absolute; right: 0; top: 0; bottom: 0; width: 60px;}
+.btnphone i {position: absolute; right: 15px; top: 50%;width: 25px; height: 25px; border-radius: 50%; border: 1px solid #099FDE; margin-top: -13px;}
+.btnphone i:before {content: ""; position: absolute; left: -16px; top: 0; height: 100%; border-left: 1px solid #eaeaea;}
+.btnphone i:after {content: ""; position: absolute; left: 6px; top: 5px; width: 14px; height: 15px; background-position: -244px 0; }
+.subblist_detail .sr-list {position: relative; top: 2px; height: 16px; overflow: hidden; line-height: 1;}
+.subblist_detail .sr-list .isr {margin-right: 10px; vertical-align: top;}
+.subb_cost {color: #4e5f71;}
+/* = 详情页-团购包含 = */
+.tuan_content {position: relative; word-break:break-all; height: auto; margin: 10px 0; padding: 10px; background: #fff -webkit-linear-gradient(top, transparent 50%, #ddd 50%) no-repeat; background-position: left bottom; background-size: 100% 1px;}
+.tuan_content a {word-break: break-all; color: #099FDE;}
+.tuan_content .item_list li:last-child {position:relative; padding-right:50px;}
+.tuan_content  .sta-on li:last-child {padding-right:0;}
+.tuan_content .view_unfold:after,.tuan_content .view_fold:before {display:none;} 
+.tuan_content .view_unfold, .tuan_content .view_fold {padding: 10px 40px;}
+.tuan_content .offer_service {box-shadow: none; padding-top: 0;}
+ /*团购包含多出一条线*/
+.less-panel {border-top: 1px solid #efefef; padding-top: 5px;}
+/* = 详情页-设施 = */
+.offer_service {overflow: hidden; font-size: 12px; color: #4d5d64; padding-top: 3px; clear: both; background: -webkit-linear-gradient(top,transparent 50%,#ddd 50%) no-repeat left bottom; background-size: 100% 1px;}
+.offer_service p {position: relative; float: left; width: 25%; height: 41px; text-align: center; color: #253342;}
+.offer_service p i {display: inline-block; -webkit-transform: scale(1.3); transform: scale(1.3); -webkit-transform-origin: 50% 0; transform-origin: 50% 0;}
+.offer_service p span {position: absolute; bottom: 0; left: 0; right: 0; font-size: 11px; padding-top: 2px; white-space: nowrap; opacity: .8;}
+.offer_service .icon_wifi {width: 20px; height: 17px; background-position: 0 -20px; margin-top: 2px; margin-bottom: 2px;}
+.offer_service .icon_net {width: 21px; height: 16px; background-position: -20px -20px; margin-top: 3px; margin-bottom: 2px;}
+.offer_service .icon_parking {width: 21px; height: 21px; background-position: -50px -20px;}
+.offer_service .icon_hotwater {width: 16px; height: 21px; background-position: -80px -20px;}
+.offer_service .icon_toiletries {width: 16px; height: 21px; background-position: -100px -20px;}
+.offer_service .icon_water {width: 20px; height: 20px; background-position: -120px -20px; margin-top: 1px;}
+.offer_service .icon_slipper {width: 17px; height: 20px; background-position: -140px -20px; margin-top: 1px;}
+.offer_service .icon_nobreakfast {width: 21px; height: 21px; background-position: 0 -38px;}
+.dotitem p {padding:0 10px 0 8px; position: relative; font-size: 13px; color: #666; line-height: 2.2; min-height:20px;}
+/*购买须知多一行*/
+.dotitem p:before {content: ""; position: absolute; left: 0; top: 12px; width: 2px; height: 2px; background-color: #666;}
+.order_dl dd {height:auto;}
+/* = 详情页-其他团购 = */
+.detail_list .cui-tab-mod {border-bottom: 0 none; background-color: #FFF; }
+.detail_list_other li {height: 35px; border: 0; border-top: 1px solid #efefef;}
+.detail_list_other li:nth-child(2) {border-top: 0;}
+.detail_list_other li:not(.title) {padding: 10px 100px 10px 0;}
+.detail_list_other .desc {color: #999; font-size: 12px; margin-top: -4px;}
+.detail_list_other .info {position: absolute; right: 28px; top: 50%; text-align: right; -webkit-transform: translate(0,-50%); transform: translate(0,-50%);}
+.detail_list_other .price3 {display: block; color: #FD8612; font-size: 16px; font-weight: 700; line-height: 16px;}
+.detail_list_other .price3 i {font-size: .7em;}
+.detail_list_other .room {color: #253342; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.detail_list_other .ellipsis2 {line-height: 1.3;}
+.detail_list_other .pro_label {margin-right: 0;}
+.detail_list_other+.tuan_list_more {margin-top: -10px; margin-bottom: 10px;}
+.detail_other_info {position: absolute; top: 50%; left: 0; right: 135px; -webkit-transform: translateY(-50%); transform: translateY(-50%);}
+.detail-tuan-other li .room,.detail-tuan-other li .desc {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.detail-tuan-other li:not(.title) {padding: 10px 130px 10px 0;}
+.detail-tuan-other li .price3 {display: inline-block;}
+.detail-tuan-other .info {text-align: right;}
+/* 详情页 */
+.detail-modebox {padding: 0 0 0 15px; margin-bottom:10px; border: 1px solid #efefef; border-width: 1px 0; background-color:#fff;}
+.detail-modebox .hd {position:relative; height:44px; line-height:44px;}
+.detail-modebox .hd h6 { font-size:15px; font-weight:bold;}
+.detail-modebox .hd .more { position: absolute; right:10px; top:0; color:#099FDE;}
+.detail-modebox .hd i.status-icon { background-position:-129px 0; width:17px;}
+.detail-modebox .subblist {padding-left: 0; border-bottom: 0; margin: 0;}
+.detail-modebox .offer_service {padding: 5px 0; border-top: 1px solid #efefef;}
+/* 房态日历 */
+.status-table table { width:100%; table-layout: fixed;}
+.status-table table td {position:relative; width: 14.3%; height:30px; color:#666; padding:5px 2px; text-align:center; border: 1px solid #efefef; border-width: 1px 1px 0 0;}
+.status-table table td.date-gray { color:#b2b2b2}
+.subblist>li.average { color:#666}
+.detail-more { padding:10px 10px 5px 15px; color:#099fde; margin:0 0 0 -15px; position:relative; background-image:-webkit-linear-gradient(top,transparent 50%,#ddd 50%); background-position:left top; background-repeat: no-repeat; background-color: #fff; background-size:100% 1px;}
+.detail-more:before,.grogshop-list li:before,.scenic-about .hd a.more:before { position:absolute; right:10px; top:17px; width:10px; height:10px; overflow:hidden; content:" "; font-size:15px; box-shadow:inset 2px -2px 0 #e4e4e4; -webkit-transform: rotate(225deg); transform: rotate(225deg);}
+/* 酒店信息 */.grogshop-list li:before { top:50%;}
+/* 行程安排 */
+.detail-modebox .hd i.route-icon { background-position:-168px 0; width:17px;}
+.route-table table { width:100%;}
+.route-table table td {position:relative; color:#666; padding:10px; border: 1px solid #efefef; border-width: 1px 1px 0 0;}
+.route-table table td .route-txt { padding:0 0 5px 10px; position:relative;}
+.route-table table td .route-txt:before {content: ""; position: absolute; left: 0; top: 9px; width: 2px; height: 2px; background-color: #666;}
+/* 景点介绍 */
+.scenic-about .hd a.more:before { right:0;}
+/* 其他团购 */
+.raw-price { color:#ccc; text-decoration:line-through; font-size:12px;}
+.raw-price i {font-weight: 400; color:#ccc;}
+/* 商户信息报错 */
+.shop-errors {text-align:center; color:#099fde; font-size:15px; padding:12px 0 10px; border: 1px solid #efefef; border-width: 1px 0; background-color:#fff;}
+.shop-errors .errors-icon { width:21px; height:22px; background-position:-201px 0; margin-right:10px; display:inline-block; vertical-align:middle;}
+/* = 详情页在线订 = */
+.detail_htl {position: relative; margin-bottom: 10px; border-top: 1px solid #efefef; }
+.detail_htl_tit {line-height: 14px; color: #ccc; padding-left: 15px; }
+.detail_htl_tit h3 {height: 14px; color: #253342; font: 14px/1 "Microsoft Yahei"; margin-right: 10px; padding-right: 10px; border-right: 1px solid #ccc;}
+.detail_htl_tit h3 span {color: #777;}
+.detail_htl_date {line-height: 1; font-size: 0; padding: 10px 15px 6px 0; margin-left: 10px; margin-bottom: 1px; border-top: 1px solid #efefef;}
+.detail_htl_date:active {background-color: #f5f5f5;}
+.detail_htl_date i {display: inline-block; width: 17px; height: 18px; margin: 5px 13px 0 4px; background-position: -49.5px 0;}
+.detail_htl_date .date-item {display: inline-block; vertical-align: top; font-size: 30px; color: #253342;}
+.detail_htl_date .line2 {padding-top: 2px;}
+.detail_htl_date .line2 span {display: block; height: 12px; line-height: 12px; font-size: 12px; color: #253342; -webkit-transform: scale(.92); transform: scale(.92);}
+.detail_htl_date .line2 span:last-child {color: #999;}
+.detail_htl_date .line2-border {width: 15px; border-bottom: 1px solid #D3D3D3; margin: 0 10px;}
+.detail_htl_date .detail_htl_sum {position: relative; color: #959595; font-size: 12px; border-left: 1px dashed #D6D6D6; padding-left: 12px; margin: 9px 0 0 16px;}
+.detail_htl_date .txt {display: inline-block; color: #A7A6A6; font-size: 14px; line-height: 30px; vertical-align: top;}
+.detail_htl_list {border-bottom: 1px solid #efefef;}
+.detail_htl_list li {position: relative; height: 53px; padding: 6px 6px 6px 0; margin-left: 15px; border-top: 1px solid #efefef;}
+.detail_htl_list img {border-radius: 2px;
+background: #efefef url(//pic.c-ctrip.com/h5/tuan/noimg.png) no-repeat center center;
+background-size: 35px 38px;}
+.detail_htl_info {overflow: hidden; margin-left: 80px; margin-right: 76px;}
+.detail_htl_info h4, .detail_htl_info .info {line-height: 26px;}
+.detail_htl_info .info {height: 26px; overflow: hidden; font-size: 0;}
+.detail_htl_info h4 {color: #4e5f71; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.detail_htl_r {position: absolute; right: 6px; top: 50%; line-height: 12px; text-align: center; color: #999; font-size: 12px; -webkit-transform: translateY(-50%); transform: translateY(-50%);}
+.detail_htl_r p {margin-top: 6px;}
+.detail_htl_btn {display: inline-block; height: 30px; line-height: 30px; font-size: 16px; font-weight: 600; color: #fefefe; text-align: center; white-space: nowrap; padding: 2px 21px; border-radius: 3px; box-shadow: 0 2px 0 #e47c15; background-color: #ff9a14;}
+.detail_htl_btn_disable {box-shadow: 0 2px 0 #8d8d8d; background-color: #b8b8b8;}
+.detail_htl_info .gray_label,
+.detail_htl_info .htl_price,
+.detail_htl_info .pro_label,
+.detail_htl_info .pro-subtract,
+.detail_htl_info del {vertical-align: middle; margin-right: 3px;}
+.detail_htl_info .gray_label {display: inline-block; width: 12px; height: 12px; line-height: 13px; font-size: 10px; text-align: center; color: #fff; border-radius: 2px; background-color: #c4c9cc;}
+.detail_htl_info .htl_price {color: #FD8612; font-size: 16px; font-weight: 700; margin-right: 3px;}
+.detail_htl_info .htl_price dfn {font-size: .7em;}
+.detail_htl_info .pro-subtract {line-height: 18px; margin-right: 3px;}
+.detail_htl_info .pro_label {margin-right: 0;}
+.detail_htl_info del {color: #d9d9d9; font-size: 10px;}
+/* = 详情页在线订 end = *//* = 携程团购温馨提示 = */
+.linktips { display: block; height: 45px; font-size: .928em; line-height: 45px; text-align: center;}
+.linktips span {color:#099fde; margin-left: 10px;}
+/* = 详情页-详情页浮层 = */
+.layer_detail_notice {position: fixed; width: 100%; height: 100%; left: 0; top: 0; z-index: 100; background-color: rgba(0,0,0,0.9); overflow: auto;}
+.layer_detail_notice .detail_list {background: none; padding-right: 15px;}
+.layer_detail_notice .detail_list li:not(:first-child) {background: none;}
+.layer_detail_notice .detail_list li:first-child {background-color: transparent; font-weight:normal;}
+.layer_detail_notice .order_dl {max-height: none; padding:0 10px;}
+.layer_detail_notice .order_dl dt {color: #25b5ff; padding-bottom:3px; float: none; width:auto; text-align:left; font-size:16px;}
+.layer_detail_notice .order_dl dd { padding-bottom:10px;}
+.layer_detail_notice .dotitem p, .layer_detail_notice .bluetext {color: rgba(255,255,255,0.8);}
+.layer_detail_notice .dotitem p:before {background-color: rgba(255,255,255,0.8);}
+.layer_detail_notice .detail_list .title {color: #fefefe; text-align: center; font-size: 18px; padding-top: 30px; padding-bottom: 10px; margin-bottom: 10px; background:-webkit-linear-gradient(top,transparent 50%,#8c8c8c 50%) no-repeat left bottom; background-size: 100% 1px;}
+.layer_detail_notice .detail_list {border-bottom: 0;}
+.hotel-g-btn {float: right; min-width: 75px; color: #fff; padding: 5px 10px; border-radius: 3px; background-color: #ff9a14; box-shadow: 0 2px 0 #e47c15;}
+.cui-layer-info-wrap {position: relative; z-index: 3000;}
+.cui-layer-info {position: fixed; top: 0; bottom: 0; left: 10px; right: 10px; z-index: 9999; padding: 0;}
+.cui-layer-info .cui-pop-box {width: 100%; min-height: 456px;}
+.cui-layer-info .cui-hd {position: absolute !important; top: 0; left: 0; right: 0; color: #000; padding: 0 50px 0 10px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; background-color: #fff;}
+.cui-layer-info .cui-bd {position: absolute; top: 40px; bottom: 42px; width: 100%; overflow-y: auto; background-color: #fff;}
+.cui-poplayer-info-wrap {position: relative; z-index: 3000;}
+.cui-poplayer-info {position: fixed; top: 0; bottom: 0; left: 10px; right: 10px; z-index: 9999; padding: 0;}
+.cui-poplayer-info .cui-pop-box {width: 100%; min-height: 461px;}
+.cui-poplayer-info .cui-hd {background: #099fde!important; color:#ffffff!important; position: absolute !important; left: 0px; right: 0px; color: #000; padding: 0 50px 0 10px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; background-color: #fff; z-index: 9999;}
+.cui-poplayer-info .cui-bd {overflow-y: auto!important; overflow-x: hidden!important; position: absolute !important; top: 40px; bottom: 0px; height: auto !important; width: 100%; overflow-y: auto; background-color: #fff;}
+.cui-layer-info .cui-ft-fixed {position: absolute; width: 100%;}
+.hotel-detail-layer {width: 100%; line-height: 22px; background-color: #fff;}
+.hotel-detail-layer .layer-hd i {width: 15px; height: 15px; margin: 2px 15px 0 0; float: left}
+.hotel-detail-layer .layer-hd span {min-width: 50px; color: #666; float: left; margin-right: 5px;}
+.hotel-detail-layer .hotel-layer-txt {background: #efefef;}
+.hotel-detail-pic { overflow:hidden; position:relative; background-color:#e5e7e8;}
+.hotel-detail-pic:before {content:""; width:100%; height:100%; position:absolute; bottom:0; left:0; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAABzAgMAAAA5/JSTAAAADFBMVEXHx8fl5+jc3NzR0dLzEXoCAAACmElEQVR42u3VMW4TQRTG8U+amtnTpHBjn2IcxRRUUCxI5DLb0LtgmuQAiFjKGXwEF7iBerA8rGzitXlLYjO7bz6J/Z/gp2+e13CtlXffY93X4CuXozZWGRdoMjHMnXaS9X4D0SSojiZZsw3ai3qTSdbHBf7aVmkxyfqC5zLfnEKCNf2BFxr3PphkSZWsUHE1LKlqz6xcb0nWXsXjOrDuASLXE+sDzs70dV+S9RqHKO5+z5oucEnWiXph3eOyRk7UA+sNLq3vs4c7ekKes4c7/AqZzqtmXWMX1XnVrFugjuu8sB+L7RmxG4vuGXGNf80sXW/hFkD+Z7y5cSdhAZHy1b/z+94es0TKH9VPvqkSrExXP/MnzQUry9WX/s8ES//qp172uRMWVl2opAv6c8mzki6kdpWoks27YJlUlawLFkbpdyWfEcmZKlElqxyyzOWb2udCjrlK/0IVOuhV4rnL5uiiZeJhyVeE/lz+HJb6XKUey3byhJKl94/tNVk27QklS3euqddl2aQnlCzVuWbqLJvyhJKlOVeZgWUTnlCyFOfyWVg24QkFS22umc/EsslP2LC05irzsWzqEzYsnbmmPifLJh5Ww1KZq8zMsucclj4Lq1ZVdlbRdu75WbiS587AMkJFwcLoVFWSsEx1qiJhYXSiomFheaQiYtlGxcTC6knFxTK/vwxkrN3Vez6WqWaekAXrKVkInCzDycKYk4XAySo4WRhzshA4WWZNyULBycKWk2XWlCwUa0oWCk4WxpwsBE6WCZSs2kXJgllTsmoXJat2UbJgAiWrdlGygC0nCxNOFopAyQLiuS7oZs64sIe4gXrFs4vFhqSdiaFto4cYF8hbEWPzmnc/84OOe5zEzSOGhoaGhv67fgFpVB0aF/UhSwAAAABJRU5ErkJggg==) no-repeat; background-size: contain; background-position: center bottom;}
+.hotel-detail-pic:after {content:""; background-image: url(//pic.c-ctrip.com/h5/tuan/loading.png); background-size: 76px 38px; background-repeat: no-repeat; background-position: -38px 0; width:38px; height:38px; position:absolute; top:25px; left:50%; margin-left:-19px; -webkit-transform: scale(2,2);}
+.layer_img {position: relative; z-index:2; height:80px; overflow:hidden; font-size: 0;}
+.layer_img li {display: inline-block; overflow: hidden; vertical-align: top;}
+.layer_img img {display: block; width: 100%;}
+.hotel-detail-pic .hotel-detail-singular {position: absolute; bottom: 0; right: 0; height: 22px; color: #fff; padding: 0 5px; background-color: rgba(0,0,0,.5); z-index:9;}
+.offer_tip {color: #666; padding: 5px 15px; overflow: hidden; background: -webkit-linear-gradient(top,transparent 50%,#ddd 50%) no-repeat left bottom; background-size: 100% 1px;}
+.offer_tip .rt {overflow: hidden; font-size: 12px; line-height: 16px;}
+.offer_tip .pro_label {float: left; margin-right: 5px;}
+.offer_tip_can {margin: 3px 0;}
+.offer_cont {padding: 8px 15px;}
+.offer_cont h5 {color: #777; font-size: 13px;}
+.offer_cont ul {color: #253342; padding-left: 1.2em; list-style: disc; margin-bottom: 7.5px;}
+.offer_cont a {color: #099fde;}
+.cui-layer .cui-pop-box {border-radius: 5px; overflow: auto;}
+.cui-pop-box .cui-hd .cui-top-close:before {left: 51%;}
+/* 门票详情其他团购 */
+.tuan_list_other:after {display:block; clear:both; height:0; visibility:hidden; content:" "; overflow:hidden;}
+.tuan_list_other li:active {background-color:transparent;}
+.tuan_list_other li:first-child {background-image:none;}
+/* 门票详情-包含 */
+.item_list li:before {content:""; display:inline-block; width:2px; height:2px; border-radius:1px; overflow:hidden; background-color:#666; float:left; position:absolute; left:10px; top:10px;}
+/* 房态信息弹出层 */
+.pop-room-status { padding:0 10px;}
+.pop-room-status .pop-room-hd { border-bottom:1px solid #969696; margin-bottom:10px; padding-bottom:10px;}
+.pop-room-status .pop-room-hd h6 { font-size:18px; color:#fff; text-align:center;}
+.pop-status-table-box { overflow:hidden;}
+.pop-status-table { background:#fff; border-radius:5px; position:relative;}
+.pop-status-table table { width:100%;}
+.pop-status-table table th { background-color:#099fde; padding:8px; color:#fff;}
+.pop-status-table table td { padding:6px; text-align:center; border-top:1px solid #ddd; height:38px; width:42px; font-size:14px;}
+.not { color:#ccc; font-size:12px;}
+.have { color:#5ab700; font-size:12px;}
+.popup-operate ul li {margin: 0; border-bottom: 1px solid #efefef; }
+/* = 房态日历 = */
+.pop-roomst-box {position: absolute; top: 50%; margin: 0 15px; overflow: hidden; border-radius: 5px; background-color: #fff;
+-webkit-transform: translateY(-50%); transform: translateY(-50%);}
+.pop-room-hd { border-bottom:1px solid #969696; margin:20px 15px 20px; padding-bottom:10px;}
+.pop-room-hd h6 { font-size:18px; color:#fff; text-align:center;}
+.pop-roomst-box .cui_cldweek {position: static;border-radius: 5px 5px 0 0;background-color: #099fde;color: #fff;padding: 8px 0;font-size: 14px;}
+.pop-roomst-box .cui_cldmonth {position: absolute; width: 100%; height: 80px; text-align: center; font: normal 18px/40px Tahoma, Geneva, sans-serif; background: none; overflow: hidden; padding-top: 118px;}
+.pop-roomst-box .month-bg{ font-size:8em; width:100%; color:#ccc; opacity:0.2;}
+.pop-roomst-box .cui_cldweek li:last-child,.pop-roomst-box .cui_cldweek li:first-child{ color:#fff;}
+/* 房态日历 end *//* = 在线订详情浮层 = */
+.hotel-detail-layer .g-price {float: left; line-height: 32px; font-size: 26px; color: #FF9A14;}
+.hotel-detail-layer .g-price dfn {vertical-align: 0; font-size: .7em; margin: 0 2px 0 5px;}
+.hotel-detail-layer .g-price i {vertical-align: 0; font-size: .5em; color: #666;}
+/* = 在线订详情浮层 end = *//* = 大图展示页 = */
+.detail_pics {overflow:hidden; margin:0 auto;}
+.detail_pics_in {padding-top:7px;}
+.detail_pics_in:after {display:block; clear:both; height:0; visibility:hidden; content:" "; overflow:hidden;}
+.detail_pics_in li {float:left; width:49.3%; height:112px; margin-bottom:7px; overflow:hidden;}
+.detail_pics_in img {width:100%; height:100%; vertical-align:middle; margin-left:5px;}
+.detail_pics_show {position:relative; z-index:1; width:100%; height:100%; background-color:#0b0b0b;}
+.pics_show_box {position:absolute; z-index:1; top:50%; left:0; width:100%; -webkit-transform:translate(0,-50%); transform: translate(0,-50%);}
+.detail_pics_show p {padding-top:20px; text-align:center; color: #fefefe;}
+.detail_pics_show p em { color:#b9b9b9}
+.pics_show_box_in {position:relative; z-index:1; width:100%;}
+.pics_show_box_items {width:100%; height: 100%; overflow:hidden;}
+.pics_show_box_items img {display:block; width:100%;}
+/* = 点评 = */
+.comm_review {border:1px solid #ccc; margin:10px; padding-top:4px; background-color:#fff;}
+.comm_list {padding-top:8px; border-bottom:1px solid #ccc;}
+.comm_list:last-child {border-bottom:none;}
+.comm_review_p {padding:0 10px 8px; color:#333; word-break: break-all;}
+.comm_user {padding-left:10px; padding-right:10px; color:#666;}
+.comm_user span {float:right;}
+.comm_overall {padding-left:10px; padding-right:10px; line-height:28px; font-size:1.07143em;}
+.comm_overall:after {display:block; content:" "; height:0; overflow:hidden; clear:both; visibility:hidden;}
+.comm_title {float:left; margin-right:14px;}
+.comm_fen_num {float:left; color:#099fde; font-size:15px;}
+/*.comm_fen_num:after {padding-left:3px; content:"\5206"; color:#099fde;}
+*/
+.comm_recomm {float:right;}
+.comm_score {padding:0 10px 8px; color:#999; font-size:0.92857em;}
+.comm_qr {overflow:hidden;}
+.comm_qr .comm_fen {margin-top:4px;}
+/* = 服务优势 = */
+/* page service */
+.service_img {display:block; position:relative; z-index:1; margin-bottom:-1px;}
+.service_box {padding-left:10px; padding-right:10px; margin-bottom:10px; border-top:1px solid #ccc; border-bottom:1px solid #ccc; background-color:#fff;}
+.service_title {padding-top:10px; padding-bottom:10px; color:#099fde; font-size:1.143em;}
+.service_title:before {display:inline-block; margin-right:3px; width:17px; height:17px; content:" "; vertical-align:-2px;}
+.service_con dt {font-weight:bold;}
+.service_con dd {padding-top:6px; padding-bottom:15px;}
+.service_txt_hl {color:#ff6500;}
+/* = 商户列表 = */
+.business_list {border-top: 1px solid #efefef;}
+.business_list .busi_city_wrap {height:45px; border-bottom: 1px solid #efefef; background-color: #fff;}
+.business_list .busi_city {position:relative; z-index:1; line-height:45px;	padding-left:10px;}
+.business_list .busi_fixed {position:fixed; z-index:10; top:0; left:0; width:100%;}
+.busi_hotel {display:none;}
+.arrow_skin01_down, .arrow_skin01_up {position:absolute; z-index:1; top:15px; right:10px;	width:6px; height:6px;	-webkit-transform:rotateZ(-45deg); transform:rotateZ(-45deg);}
+.arrow_skin01_down {border-left:2px solid #099fde; border-bottom:2px solid #099fde;}
+.arrow_skin01_up {border-top:2px solid #099fde; border-right:2px solid #099fde;}
+/* = 团购券列表 = */
+.code_bg {background-color: #E9E0CF;}
+.code_tip {font-size: 12px; color: #fff; padding: 6px; margin: 10px; border-radius: 5px; background-color: #D4B783;}
+.nocode_tip {height: 38px; line-height: 38px; color: #666; text-align: center; padding: 20px 10px;}
+.nocode_tip .nocode_icon {display: inline-block; width: 38px; height: 38px; margin-right: 10px; vertical-align: middle; border-radius: 50%;
+background: #fff url(//pic.c-ctrip.com/h5/tuan/emotion3.png) no-repeat 6px -1px; background-size: 40px 52px;}
+.code_box {position: relative; height: 213px; border-radius: 5px; margin: 16px 10px 18px; overflow: hidden; background-color: #fff;}
+.code_box img {width: 100%; height: 169px; margin-bottom: -60px; background-color: #fff;}
+.code_box .code_box_info {position: absolute; left: 0; right: 70px; bottom: 0; height: 44px; line-height: 44px; color: #162B3F; font-size: 10px; padding-left: 5px;}
+.code_box .code_box_info .fr {font-size: 11px;}
+.code_box h3, .code_box .code_subtit {position: relative; z-index: 2; color: #fff; margin: 0 10px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.code_box h3 {font: 16px/1.5 "Microsoft Yahei";}
+.code_box .code_subtit {font-size: 10px; margin-right: 52px;}
+.code_box_price {position: absolute; right: 5px; bottom: 9px; z-index: 3; width: 63px; text-align: center; color: #fff; border-radius: 50%; overflow: hidden;}
+.code_box_price .cur_price {height: 37px; font-size: 10px; line-height: 44px; background-color: #FF7D09;}
+.code_box_price .cur_price em {font-size: 22px; font-weight: 700;}
+.code_box_price .cur_price dfn {font-size: 12px; font-weight: 700;}
+.code_box_price .ori_price {height: 26px; background-color: #F6B645;}
+.code_timebox {}
+.code_time {position: relative; display: inline-block; width: 19px; height: 17px;
+line-height: 19px; font-size: 14px; font-weight: 700; text-align: center; color: #fff; vertical-align: -1px;
+margin: 0 1px; border-radius: 2px;
+background-color: #162B3F;}
+.code_time:after {content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: -webkit-linear-gradient(top, transparent 50%, #000 50%) no-repeat left bottom; background-size: 100% 1px;}
+.code_tit_shadow {position: absolute; top: 85px; left: 0; right: 0; z-index: 1; height: 84px; background: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.7) 100%);}
+.code_qa {position: relative; margin: 0 10px; margin-right: 78px; padding-bottom: 50px;}
+.code_qa h3 {font: 12px/1.5 "Microsoft Yahei";}
+.code_qa p {font-size: 10px; color: #666;}
+.code_qa_btn {position: absolute; top: 20px; right: -68px; width: 60px; height: 25px; line-height: 26px; color: #fff; text-align: center; font-weight: 700; font-size: 12px; border-radius: 5px; background-color: #099FDE;}
+.code_section {margin: 10px; border: 1px solid #efefef;}
+.code_section ul {margin: 0 11px; border-bottom: 0;}
+.code_section li {padding: 8px 4px; margin: 0; border-top: 1px dashed #efefef;}
+.code_section li:before {display: none;}
+.code_section li.arr_r:after {right: 2px;}
+.code_section .tk_tit {text-align: left;}
+.code_section .tk_num {padding-left: 14px;}
+.code_section .tuan_list_more {margin: 0 11px; border-top: 1px dashed #efefef; border-bottom: 0;}
+.code_hd {position: relative; padding: 10px 15px;}
+.code_hd:before, .code_hd:after {content: ""; position: absolute; left: -8px; bottom: -8px; width: 15px; height: 15px; border-radius: 50%; background-color: #f4f4f4;}
+.code_hd:after {left: auto; right: -8px;}
+.code_hd h3, .code_hd p {text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.code_hd h3 {font: 16px/22px "Microsoft Yahei"; color: #253342;}
+.code_hd p {color: #999;}
+.code_hd .code_num {position: absolute; right: 0; bottom: 0; font-size: 11px; line-height: 1; color: #099FDE; padding: 2px 9px; border: 1px solid #099FDE; border-radius: 10px;}
+.code_hd .code_hd_date {margin-right: 40px;}
+.code_hd_info {position: relative; margin-right: 75px;}
+.code_pic {float: right; width: 66px; height: 65px; text-align: center; color: #999; font-size: 11px; border-left: 1px dashed #efefef; padding-left: 5px; margin-right: -5px;}
+.code_pic:before {content: ""; display: block; margin: 5px auto; width: 36px; height: 36px; background: url(//pic.c-ctrip.com/h5/tuan/spr_link.png) no-repeat -91px -1px; background-size: 175px auto;}
+/* = 团购券详情 = */
+.code-detail {margin-bottom: 10px;}
+.code-detail .tuan_policy {padding: 12px 15px; background-color: #fff;}
+.code-detail_tit {padding: 10px; border-bottom: 1px solid #efefef; background-color: #fff;}
+.code-detail_tit img {float: left; width: 80px; height: 60px; line-height: 0; border-radius: 2px; background: #efefef url(//pic.c-ctrip.com/h5/tuan/noimg.png) no-repeat center center; background-size: 35px 38px;}
+.code-detail_tit .co_tit_info {min-height: 60px; line-height: 20px; margin-left: 86px; margin-right: 5px; overflow: hidden;}
+.code-detail_tit h2, .code-detail_tit p {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.code-detail_tit h2 {font: 15px/20px "Microsoft Yahei"; color: #253342;}
+.code-detail_tit p {color: #999;}
+.co_tk_list {}
+.co_tk_list .co_tui {line-height: 30px; color: #666; font-size: 12px; padding-left: 15px;}
+.co_tk_list .tk_tit {width: 3em;}
+.co_tk_list li:before {display: none;}
+/* = 团购券页——二维码浮层 = */
+.pop-dimension-single, .pop-dimension-multiple {position: fixed; top: 50%; left: 0; right: 0; z-index: 5000; padding: 20px 0; -webkit-transform: translateY(-50%); transform: translateY(-50%);}
+.pop-dimension-single .pop-dimension, .pop-dimension-multiple .pop-dimension {display: inline-block; width: 80%; margin: 0 5% 5px;}
+.pop-dimension-single {padding-left: 0;}
+.pop-dimension-single .pop-dimension {margin: 0 10% 5px;}
+.pop-dimension-multiple {padding-left: 10%;}
+.pop-dimension-list {white-space: nowrap; font-size: 0;}
+/* = 新手引导，不久后删除 = */
+.newer, .newer-code {}
+.newer:before {content: ""; position: absolute; top: 200px; left: 172px; z-index: 9999; width: 120px; height: 86px; background: url(//pic.c-ctrip.com/h5/tuan/newer.png) no-repeat; background-size: 120px 86px;}
+.newer_mask {position: fixed; z-index: 3001; background-color: rgba(0,0,0,.8);}
+.newer_mask1 {top: 0; left: 0; right: 0; height: 170px;}
+.newer_mask2 {top: 217px; bottom: 0; left: 0; right: 0;}
+.newer_mask3 {top: 170px; left: 0; width: 11px; height: 47px;}
+.newer_mask4 {top: 170px; right: 0; width: 11px; height: 47px;}
+.newer-code:before {top: 210px; left: 180px;}
+.newer-code .newer_mask2 {top: 245px;}
+.newer-code .newer_mask3, .newer-code .newer_mask4 {height: 75px;}
+
+/* = 糯米 = */
+.detail-shop-nuomi {line-height: 2; padding: 10px; }
+.detail-shop-nuomi h6 {position: relative; text-align: center; font-size: 16px; color: #F60; padding: 6px 20px; margin: 10px 50px; background-color: #FFF; }
+.detail-shop-nuomi h6:before, .detail-shop-nuomi h6:after {content: ""; position: absolute; width: 10px; height: 10px; border: 1px solid #999; }
+.detail-shop-nuomi h6:before {left: 3px; top: 3px; border-width: 1px 0 0 1px; }
+.detail-shop-nuomi h6:after {right: 3px; bottom: 3px; border-width: 0 1px 1px 0; }
+.detail-shop-nuomi strong, .detail-shop-nuomi ul {display: block; padding: 10px 8px; }
+.detail-shop-nuomi b {display: block; }
+.detail-shop-nuomi img, .pic-details-list .pic img {width: 100%; min-height: 175px; margin-bottom: 15px; background: #EFEFEF url(//pic.c-ctrip.com/h5/tuan/noimg.png) no-repeat center center; box-shadow: 0 0 1px #999 inset;}
+
+/* = 酒店信息页6.7.1 = */
+.htl_wrap {}
+.htl_wrap .subb_phone {padding-left: 0;}
+.htl_wrap .htl-info-txt {padding: 12px 10px 12px 0; word-break: break-all;}
+.htl_wrap .htl-info-server {}
+.htl_wrap .htl-info-server .title {border-bottom: 0;}
+.htl-info-server .expand {padding: 7px 0;}
+.htl-info-server .expand b {font-weight: 400; padding-right: 15px;}
+.htl-info-server .sr-list {margin-bottom: 8px;}
+.sr-list {overflow: hidden;}
+.sr-list-b {float: left; width: 33.3%; font-size: 12px; color: #4E5F71; margin-bottom: 8px;}
+.sr-list-b .isr {vertical-align: middle; margin-right: 5px;}
+.detail_htl_phone {position: relative; padding: 10px; border-top: 1px solid #efefef;}
+.detail_htl_phone .isr16 {vertical-align: middle; margin: 0 5px;}
+.detail_htl_phone .btnphone:before {border-left: 0;}
+.detail_htl_phone .btnphone i:before {display: none;}
+/* 价格力弹出层 */
+.lay-order-detail .lay-order-list{ padding-left: 10px;}
+.lay-order-detail .lay-order{ background-color:#fff; margin:0 10px; padding:15px 0 35px 0; border-radius: 5px;}
+.lay-order-detail .lay-order-hd{ font-size:15px; color:#253342; padding-bottom:10px; padding-left: 10px;}
+.lay-order-detail .lay-order-price { color:#666;}
+.lay-order-detail .lay-order-price .color_orange{ padding-bottom:2px;}
+.lay-order-detail .lay-order-list li{ padding-left: 0px;}
+
+/* = 服务设施new 6.7.1 = */
+.isr {position: relative; display: inline-block; background: url(//pic.c-ctrip.com/h5/tuan/spr_service6.9.png) no-repeat; background-size: 286px auto; background-clip: content-box;}
+.isr2, .isr5 {padding-right: 1px; }
+.isr4 {padding: 0 2px 0 1px; }
+.isr6, .isr15 {padding: 0 2px; }
+.isr1 {width: 16px; height: 13px; background-position: 0 0; }/*wifi*/
+.isr2 {width: 15px; height: 15px; background-position: -17px 0; }/*有线上网*/
+.isr3 {width: 17px; height: 16px; background-position: -33px 0px; }/*免费停车*/
+.isr4 {width: 13px; height: 15px; background-position: -49px 0px; }/*免费洗漱*/
+.isr5 {width: 15px; height: 15px; background-position: -64px 0px; }/*免费地图*/
+.isr6 {width: 12px; height: 16px; background-position: -77px 0px; }/*免费瓶装水*/
+.isr7 {width: 16px; height: 16px; background-position: -91px 0px; }/*吹风机*/
+.isr8 {width: 16px; height: 16px; background-position: -108px 0px; }/*叫醒服务*/
+.isr9 {width: 16px; height: 15px; background-position: -125px 0px; }/*24小时热水*/
+.isr10 {width: 16px; height: 15px; background-position: -142px 0px; }/*接机服务*/
+.isr11 {width: 17px; height: 16px; background-position: -159px 0px; }/*无烟房*/
+.isr12 {width: 16px; height: 12px; background-position: -177px 0px; }/*行李寄存*/
+.isr13 {width: 16px; height: 16px; background-position: -194px 0px; }/*健身房*/
+.isr14 {width: 16px; height: 14px; background-position: -210px 0px; }/*游泳池*/
+.isr15 {width: 12px; height: 16px; background-position: -226px 0px; }/*餐厅*/
+.isr16 {width: 13px; height: 15px; background-position: -240px 0px;}/*bizdetail,提前预约icon*/
+.isr18 {width: 18px; height: 17px; background-position: -269px 0px;}/*无早餐*/
+/*.isr17 {width: 13px; height: 13px; background-position: -254px 0px;}*//*暂时用不到*/
+
+/*
+ * policy图标转为base64
+*/
+.tuan_policy li:before, .service_title:before {background-image: url(data:image/png;base64,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); background-size: 71px auto; background-repeat: no-repeat;}
+.ico_refund:before {background-position:0 -18px;}
+.ico_return:before {background-position:-19px -18px;}
+.ico_free:before {background-position:-36px -18px;}
+.ico_refund_no:before {background-position:0 0;}
+.ico_return_no:before {background-position:-19px 0;}
+.ico_free_no:before {background-position:-36px 0;}
+.ico_comments:before {background-position: -54px -18px;}
+/* 倒计时 */
+.fall-time{ background-color:#e4edf5; padding:10px; border-bottom:1px solid #dde4eb; color:#253342; overflow:hidden;}
+.fall-time .time{ float:right; color:#5e7082;}
+.fall-time .time .time-icon{ background-color:#334250; padding:3px 4px; margin:0 4px; color:#fff;border-radius: 5px;}
+.sold em{ color:#333}
+/* = 详情页周边团购推荐 = */
+.pro_list4 {}
+.pro_list4 li {padding: 5px 0;}
+.pro_list4 .pro_list_imgbox, .pro_list4 .pro_list_imgbox img, .pro_list5 .pro_list_imgbox, .pro_list5 .pro_list_imgbox img {width: 70px; height: 70px; border-radius: 2px;}
+.pro_list4 .pro_list_info {margin-left: 78px; min-height: 71px; margin-right: 20px;}
+.pro_list4 .pro_list_tit, .pro_list5 .pro_list_tit {font-weight: normal; margin-right: 0; padding-top: 5px; font-size:15px;}
+.pro_list4 .pro_list_tit {margin-right: 30px;}
+.pro_list4 .pro_list_subtit {color: #999; margin: 1px 75px 3px 0; font-size:13px; padding-top: 0;}
+.pro_list4 .pro_list_dist, .pro_list5 .pro_list_dist {position: absolute; bottom: 3px; display: block; padding-left: 15px;}
+.pro_list4 .pro_list_dist:before, .pro_list5 .pro_list_dist:before {left: 0;}
+.pro_list4 .pro_list_price, .pro_list5 .pro_list_price {position: absolute; right: 3px; top: 50%; font-size: 12px; margin-top: -11px;}
+.pro_list4 .pro_list_price i, .pro_list5 .pro_list_price i {font-size: 17px; padding-left: 0;}
+.pro_list4 .pro_list_price .raw-price i {font-size: 12px; color: #ccc;}
+.pro_list4 .wrap_label {position: absolute; right: 3px; top: 47px;}
+.pro_list4 .raw-price {color: #ccc; margin-right: 3px;}
+/* = 详情页周边团购推荐 end = */
+/* = 周边团购页面 = */
+.pro_list5 {margin: 0; background-color: #efefef;}
+.pro_list5 li {padding: 4px; border-bottom: 1px solid #efefef; background-color: #fff;}
+.pro_list5 .pro_list_info {min-height: 70px;}
+.pro_list5 .pro_list_subtit {padding-top: 0; margin-right: 90px;}
+/* = 周边团购页面 end = */@media screen and (max-width: 374px) {
+	.tuan_policy li span {display: block;}
+	.tuan_policy li.ico_return_no,.tuan_policy li.ico_refund_no,.tuan_policy li.ico_free_no {line-height:15px;}
+}
+
+/* 20160108 */
+.gather-btn{ background-color:#ff9a14; border-radius: 4px; display:inline-block; padding:5px 1px 1px; width:45px; font-size:16px; color:#fff;}
+.gather-btn .htl-tips{ background-color:#fff; color:#ff9a14; font-size:12px; padding:4px 0;border-radius:0 0 4px 4px;}
+.gather-gray-btn{ background-color:#b8b8b8; padding:10px 1px; }
+.detail_htl_date i {background-position:-219px -54px; background-size:258px;}
+
+
+.pro-tally-gray {position: relative; display: inline-block; height: 13px; color: #4e5f71; font-size: 10px; line-height: 14px; padding: 1px 2px; text-align: center; border: 1px solid #b1bdcb; border-radius: 2px; vertical-align:middle;}
+
+/* 20160224系统加价 */
+.pop-raise-price-box{ position: fixed; bottom:0; left:0; width:100%; background-color:#fff;}
+.pop-raise-price-box .raise-hd{ height:40px; line-height:40px; color:#999; border-bottom:1px solid #efefef; font-size:14px; padding-left:10px; position: relative;}
+
+.raise-hd .close { width: 40px; height: 40px; float: right; line-height: 40px; color: transparent; text-align: center; font-weight: 700; position: relative; cursor:pointer;}
+.raise-hd .close:before,.raise-hd .close:after { width: 2px; height: 16px; position: absolute; left: 50%;top: 50%; margin: -8px 0 0 -1px; background: #e5e5e5; content: "";}
+.raise-hd .close:after {-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg); transform: rotate(-45deg);}
+.raise-hd .close:before { -webkit-transform: rotate(45deg);  -moz-transform: rotate(45deg);  -ms-transform: rotate(45deg); transform: rotate(45deg);}
+.raise-price{ padding:10px 10px 0 10px; overflow:hidden;}
+.raise-price .raise-txt{ background-color:#e8e8e8;border-radius: 5px; padding:8px 10px 5px; line-height:25px; margin-bottom:15px; overflow:hidden; color:#4e5f71;}
+.raise-price .raise-txt .price{ font-weight:normal; color:#fd8612; font-size:15px; float:right; line-height:25px;}
+.raise-price .raise-txt .price dfn{ margin-right:2px;}
+.raise-price .active{ border:1px solid #ff9a14; background-color:#fff; padding:7px 8px 4px;}
+
+.raise-btn{ overflow:hidden;}
+.raise-btn .btn-cancel{ width:50%; float:left; text-align:center; color:#fff; background-color:#a09d9d; font-size:13px; padding:9px 0 10px; }
+.raise-btn .base-btn3{ float:left; width:50%; text-align:center;}
+
+.answers-box{ background-color:#fff; border-bottom:1px solid #efefef; border-top:1px solid #efefef; padding:10px 20px 10px 10px; margin-bottom: 10px; }
+.naswers-hd{ font-size:14px;}
+.naswers-txt{ color:#999; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; font-size:12px;}
+.naswers-icon{ width:16px; height:18px; display:inline-block; margin-right:5px; background-position:-31.5px -47.5px; vertical-align:middle; }
+.detail-calendar-box{ background-color:#fff; margin:0 0 10px 0; padding-left:10px;border-bottom: 1px solid #efefef;}

@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/* = global = */
+body, h1, h2, h3, h4 {font: 14px/1.5 "Microsoft Yahei", simsun, arial; }
+.b_red {color: #BD0000; }
+
+/* = coin = */
+.coin, .coin:after, .coin:before, .coin_ctrip, .bag_wrap02 .btn_get {background: url(//pic.c-ctrip.com/h5/tuan/promotion/b_sprite.png) no-repeat; background-size: 195px 139px; }
+.coin, .coin:after, .coin:before, .coin_ctrip {position: absolute; content: ""; z-index: 2; }
+.coin {width: 47px; height: 47px; background-position: -41px 0; }
+.coin:before {width: 39px; height: 39px; background-position: 0 0; }
+.coin:after {width: 34px; height: 34px; background-position: 0 -41px; }
+.coin1 {left: 30%; top: 28%; -webkit-animation: coin 3s ease-out infinite; animation: coin 3s ease-out infinite; }
+.coin1:before {left: -57px; top: 3px; }
+.coin1:after {left: -20px; top: 10px; -webkit-animation: coinl 3s linear infinite; animation: coinl 3s linear infinite; }
+.coin2 {right: 22%; top: 29%; -webkit-animation: coinl 3s linear infinite; animation: coinl 3s linear infinite; }
+.coin2:before {right: 30px; top: 2px; -webkit-animation: coin 3s linear infinite; animation: coin 3s linear infinite; }
+.coin2:after {right: -25px; top: 9px; }
+.coin3 {right: 32%; top: 27%; z-index: 1; -webkit-animation: coinr 3s ease-out infinite; animation: coinr 3s ease-out infinite; }
+.coin3:before {right: 39px; top: 6px; }
+.coin3:after {right: 25px; top: 32px; }
+.coin_ctrip {left: 39%; top: 27%; width: 75px; height: 75px; background-position: -90px 0; -webkit-animation: coin 3s linear .5s infinite forwards; animation: coin 3s linear .5s infinite forwards; }
+
+/* = 用户及背景 = */
+.user {font-size: 14px; color: #330000; padding: 10% 12% 0; background-color: #FFDC71; }
+.bag_wrap {height: 27%; margin-top: -5%; text-align: center; background: url(//pic.c-ctrip.com/h5/tuan/promotion/money_bg.png) no-repeat 0 0; background-size: 100% 100%; }
+.bag_wrap02 {position: relative; z-index: 3; height: 36%; margin-top: -14%; text-align: center; background: url(//pic.c-ctrip.com/h5/tuan/promotion/money_bg02.png) no-repeat 0 0; background-size: 100% 100%; }
+.bag_wrap02 .btn_get {display: inline-block; width: 195px; height: 60px; margin-top: 15%; margin-bottom: 3%; background-position: 0 -78px; }
+.bag_wrap02 .btns_wrap {position: relative; font-size: 0; }
+.bag_wrap02 .btns_wrap a {position: relative; display: inline-block; width: 28%; margin-right: 30px; color: #FFF; font-size: 18px; padding: .8% 0; border: 2px solid #830000; border-radius: 3px; box-shadow: 0 0 2px #ccc inset; }
+.bag_wrap02 .btns_wrap a:after {left: auto; }
+.bag_wrap02 .btns_wrap a:first-child:before, .bag_wrap02 .btns_wrap a:after {content: ""; position: absolute; top: 50%; right: -32px; width: 30px; height: 2.5px; background-color: #7F0000; }
+.bag_wrap02 .btns_wrap a:first-child:before {left: -30px; right: auto; }
+.bag_wrap02 .btns_wrap a:last-child {margin-right: 0; }
+.b_roll {display: inline-block; width: 212px; height: 208px; margin-top: 8%; background: url(//pic.c-ctrip.com/h5/tuan/promotion/sun.png) no-repeat 0 0; background-size: 212px 208px; -webkit-animation: roll 18s linear infinite; animation: roll 18s linear infinite; }
+
+/* = text panel = */
+.b_list_wrap {padding: 30px 60px; background-color: #FEF5C3;}
+.b_list_tit {height: 15px; font-size: 20px; text-align: center; margin-bottom: 15px; border-bottom: 3px solid #BD0000; }
+.b_list_tit span {display: inline-block; padding: 0 15px; background-color: #FEF5C3; }
+.b_list {padding: 15px 0; }
+.b_list li {margin-bottom: 3px; overflow: hidden; }
+.b_list img {float: left; width: 30px; height: 30px; border-radius: 50%; overflow: hidden; background-color: #ccc; border: 1px solid #BD0000; }
+.b_list h4, .b_list p {height: 15px; font-size: 11px; line-height: 15px; }
+.b_list_info {overflow: hidden; margin-left: 36px; }
+
+/* = animation = */
+@-webkit-keyframes roll {
+	0% {-webkit-transform: rotate(0deg); }
+	100% {-webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes coin {
+	0% {-webkit-transform: translateY(0); }
+	50% {-webkit-transform: translateY(6px); }
+	100% {-webkit-transform: translateY(0); }
+}
+@-webkit-keyframes coinr {
+	0% {-webkit-transform: translate(0, 0); }
+	50% {-webkit-transform: translate(6px, 6px); }
+	100% {-webkit-transform: translate(0, 0); }
+}
+@-webkit-keyframes coinl {
+	0% {-webkit-transform: translate(0, 0); }
+	50% {-webkit-transform: translate(-6px, -6px); }
+	100% {-webkit-transform: translate(0, 0); }
+}
+
+@keyframes roll {
+	0% {transform: rotate(0deg); }
+	100% {transform: rotate(360deg); }
+}
+@keyframes coin {
+	0% {transform: translateY(0); }
+	50% {transform: translateY(6px); }
+	100% {transform: translateY(0); }
+}
+@keyframes coinr {
+	0% {transform: translate(0, 0); }
+	50% {transform: translate(6px, 6px); }
+	100% {transform: translate(0, 0); }
+}
+@keyframes coinl {
+	0% {transform: translate(0, 0); }
+	50% {transform: translate(-6px, -6px); }
+	100% {transform: translate(0, 0); }
+}

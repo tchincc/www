@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/**
+ * 为防止压缩打包时出错，请CSSer留意一下: 不要使用单引号
+ */
+/* = 品牌特卖 = */
+.brand_wrap {}
+.bd-fixed {position: static; left: 0; right: 0; top: -52px;}
+.bd-fixed-space {display: none; height: 52px;}
+.bd-banner {overflow: hidden;}
+.bd-banner img {display: block; max-height: 130px; min-height: 100px;
+line-height: 0; background: #efefef url(//pic.c-ctrip.com/h5/tuan/noimg.png) no-repeat center center; background-size: 35px 38px;}
+.bd-tab .cui-tab-mod {border-bottom: 0 none; background-color: #FFF; }
+.bd-tab li {position: relative; }
+.bd-tab .tab-band:before, .bd-tab .tab-selected:before {background: url(//pic.c-ctrip.com/h5/tuan/spr_link.png) no-repeat 0 0; background-size: 175px auto;}
+.bd-list {}
+.bd-list ul {border-top: 1px solid #efefef;}
+.bd-list li {padding: 5px; border-bottom: 1px solid #efefef; background-color: #fff; -webkit-animation: bd-list-roll .3s ease-in-out backwards; animation: bd-list-roll .3s ease-in-out backwards;}
+.bd-list img {float: left; width: 90px; height: 90px; border-radius: 3px;
+line-height: 0; background: #efefef url(//pic.c-ctrip.com/h5/tuan/noimg.png) no-repeat center center; background-size: 35px 38px;}
+.bd-list h3, .bd-list .subtit {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.bd-list h3 {font: 16px/22px "Microsoft Yahei", helvetica;}
+.bd-list .subtit {font-size: 12px; color: #5E7082;}
+.bd-list .dist {position: relative; top: 1px; float: right; font-size: 13px; color: #999;}
+.bd-list .bd-ext {position: relative; height: 20px; line-height: 20px; font-size: 0; overflow: hidden;}
+.bd-list .bd-ext>* {display: inline-block; vertical-align: top;}
+.bd-list .level, .bd-list .locate {color: #999; font-size: 10px; line-height: 20px;
+white-space: nowrap; overflow: hidden;}
+.bd-list .locate {max-width: 6em;}
+.bd-list .level {max-width: 3em;}
+.bd-list .sold {float: right; font-size: 10px; color: #999;}
+.bd-list .score {color: #099FDE; font-size: 10px;}
+.bd-list .pro_label {margin-left: 5px; padding-top: 1px;}
+.bd-list .band {display: inline-block; width: 1px; height: 10px; margin: 4px 6px; background-color: #ccc; vertical-align: top;}
+.bd-list .bd-price {position: absolute; width: 100%; bottom: -3px;}
+.bd-list .bd-price-ori {font-size: 18px; font-weight: 700; color: #FD8613;}
+.bd-list .bd-price-ori dfn {font-size: .65em;}
+.bd-list .bd-price-ori, .bd-list del {float: right;}
+.bd-list del {color: #ccc; font-size: 12px; margin: 7px 4px 0 0;}
+.bd-list-info {position: relative; height: 84px; overflow: hidden; margin-left: 96px; padding-top: 6px;}
+.bd-discount {position: relative; top: 0px; display: inline-block; width: 3.5em; height: 16px; line-height: 16px; font-size: 11px; color: #fff; text-align: center; border-radius: 3px 0 0 3px; background-color: #FD8613;}
+.bd-discount:before {content: ""; position: absolute; top: 2px; right: -6px; width: 12px; height: 12px; border-radius: 2px; background-color: #FD8613; -webkit-transform: rotate(45deg); transform: rotate(45deg);}
+/* = J_tool = */.bd-tab .tab-band:before, .bd-tab .tab-selected:before {content: ""; position: relative; display: inline-block; bottom: 2px; vertical-align: middle; margin-right: 8px;}
+.bd-tab .tab-band:before {width: 19px; height: 22px; background-position: -66px -68px;}
+.bd-tab .tab-selected:before {width: 20px; height: 20px; background-position: -44px -68px;}
+.bd-tab .tab-selected em {position: absolute; right: 50%; top: 1px; width: 2em; height: 1em; line-height: 1; font-size: 8px; color: #fff; text-align: center; margin-right: -52px; background-color: #fe5656;
+-webkit-animation: bd-hot-jump 1.2s ease-in infinite; animation: bd-hot-jump 1.2s ease-in infinite;}
+.bd-tab .tab-selected em:before {content: ""; position: absolute; left: -2px; bottom: -2px; width: 0; height: 0; border: 3px solid transparent; border-right: 3px solid #fe5656; -webkit-transform: rotate(45deg); transform: rotate(45deg);}
+.bd-tab .cui-tab-current.tab-band:before {background-position: -23px -68px;}
+.bd-tab .cui-tab-current.tab-selected:before {background-position: -1px -68px;}
+ @-webkit-keyframes bd-hot-jump {0% {top: 1px;}
+40% {top: 1px;}
+50% {top: -1px;}
+60% {top: 3px;}
+70% {top: -1px;}
+80% {top: 3px;}
+90% {top: -1px;}
+100% {top: 1px;}
+}
+@keyframes bd-hot-jump {0% {top: 1px;}
+40% {top: 1px;}
+50% {top: -1px;}
+60% {top: 3px;}
+70% {top: -1px;}
+80% {top: 3px;}
+90% {top: -1px;}
+100% {top: 1px;}
+}
+@-webkit-keyframes bd-list-roll {0% {-webkit-transform: rotateX(-90deg); opacity: 0;}
+100% {-webkit-transform: rotateX(0); opacity: 1;}
+}
+@keyframes bd-list-roll {0% {-webkit-transform: rotateX(-90deg); opacity: 0;}
+100% {-webkit-transform: rotateX(0); opacity: 1;}
+}

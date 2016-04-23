@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/* = 日历弹层 = */
+.pop_tb_calendar {position:absolute; left: -50px; z-index:1000; width: 0; height: 0; font-size:14px; text-align: center; color:#fff; border-radius:3px; padding: 0; background-color: #099FDE; opacity: 0;}
+.pop_tb_calendar strong { font-size:27px; font-family:Tahoma, Geneva, sans-serif; font-weight:normal; line-height:27px;}
+.pop_tb_calendar_show {-webkit-animation: calfadeOut 1.7s ease; animation: calfadeOut 1.7s ease;}
+ /* table版日历-浮层专用 */
+.calend-arrow {position:absolute; bottom: -7px; left: 19px; width: 0; height: 0; overflow:hidden; line-height:0; font-size:0; vertical-align:middle; border-top:7px solid #099fde; border-bottom:0 none; border-left:7px solid transparent; border-right:7px solid transparent;}
+.J_rotater {animation: test .5s ease; transform-origin: 50% 0;}
+/* = 日历覆盖样式 = */
+.cui_cldweek, .cui_cldmonth {font-family: "Microsoft Yahei", verdana;}
+.cui_cldweek {border-bottom-color: #DADADA; background-color: #f5f5f5;}
+.cui_cldweek li:first-child, .cui_cldweek li:last-child{color: #50BBE7;}
+.cui_cld_daybox {border-bottom: 1px solid #efefef; }
+.cui_cld_daybox li {position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.cui_cld_daybox li.cur {color: #fff; background-color: #099FDE; }
+.cui_cld_daybox li.cur i, .cui_cld_daybox li.cur b {color: #B9DCF2; }
+.cui_cld_daybox li.curpass {color: #333; background-color: #E6F5FC; }
+.cui_cld_daybox li.curpass b {color: #999; }
+.cui_cld_daybox i {color: #999; }
+.cui_cld_daybox b {display: block; line-height: 15px; font-weight: 400; font-size: 11px; color: #999; }
+.cui_cld_daybox .cld_sold * {color: #ccc;}
+.cui_cld_daybox .icon-calendar-holiday {position: absolute; right: 0; top: 0; width: 1em; height: 1em; font-size: 8px; color: #099FDE; line-height: 1; padding: 1px; box-shadow: 0 0 1px #099FDE inset; }
+.cui_calendar_item em.gray{color: #cfcfcf;}
+.view-wrap{ padding-bottom:35px;}
+
+/* = calener.css plus = */
+.price-bk { color:#ff9a14}
+.price-bk em { font-family: Tahoma, Geneva, sans-serif; padding-left:3px;}
+.book-leave { float:left; padding:0 5px 0 10px;}
+.book-leave .name,.book-altogether .name { color:#666;}
+.book-altogether { float:left; padding-left:10px;}
+.bookin-price-box {position:fixed; z-index:1; width:100%; bottom:0; left:0; font-size:14px; background:url(//pic.c-ctrip.com/h5/tuan/det-bg.png) repeat-x 0 top; background-size: 9.5px 12px; padding:12px 0 0; overflow:hidden;}
+.bookin-price-box .buybtn,.order-add-btn {font-size: 16px; font-weight: 600; color: #fefefe; padding: 0 20px; height: 38px; line-height: 38px; text-align: center; border-radius: 3px; position: absolute; right: 10px; top: 16px;}
+.bookin-price-box .buybtn,.order-add-btn {-webkit-box-shadow: 0 2px 0 #e47c15; box-shadow: 0 2px 0 #e47c15; background-color: #ff9a14;}
+.bookin-price { background-color:#ebebeb; overflow:hidden; padding:4px 0 3px;}
+/* 预订说明 */
+.bookin-tips-list {text-align: left; margin: -5px; }
+.bookin-tips-list li {position: relative; padding: 0 0 10px 10px; color: #666; }
+.bookin-tips-list li:before {content: ""; position: absolute; left: 0; top: 8px; width: 2px; height: 2px; background-color: #666;}
+ @-webkit-keyframes calfadeOut {
+	0% {width: 30px; height: 51px; padding: 5px 10px; margin-left:-25px; opacity: 1; -webkit-transform: scale(1); transform: scale(1);}
+	100% {width: 30px; height: 51px; padding: 5px 10px; margin-left:-25px; opacity: 0; -webkit-transform: scale(0.815); transform: scale(0.815);}
+}
+@keyframes calfadeOut {
+	0% {width: 30px; height: 51px; padding: 5px 10px; margin-left:-25px; opacity: 1; -webkit-transform: scale(1); transform: scale(1);}
+	100% {width: 30px; height: 51px; padding: 5px 10px; margin-left:-25px; opacity: 0; -webkit-transform: scale(0.815); transform: scale(0.815);}
+}
+@keyframes test {
+0% {opacity: 0.2; transform: rotateY(180deg);}
+100% {opacity: 1; transform: rotateY(0deg);}
+}

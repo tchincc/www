@@ -1,0 +1,13 @@
+/* = base.css = */
+html, body, table, th, td, tr, ol, ul, li, p, h1, h2, h3, h4, h5, h6 {margin: 0; padding: 0; }
+ol, ul, li {list-style: none; }
+html, body {font-size: 14px; background-color: #FEFEFE; }
+a {text-decoration: none; }
+.tc {text-align: center; }
+.fl {float: left; }
+.fr {float: right; }
+
+/* = header = */
+.header {height: 44px; line-height: 44px; font-size: 1.285rem; text-align: center; color: #FFF; background-color: #099FDE; }
+.list_wrap li {font-size: 1.14rem; color: #666; padding: 15px; border-bottom: 1px solid #CCC; background-color: #FFF; }
+.list_wrap li a {display: block; }
